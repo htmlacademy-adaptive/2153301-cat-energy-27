@@ -19,6 +19,17 @@
       <button class="main-nav__toogle" type="button">
         <span class="visually-hidden">открыть меню</span>
       </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">подбор программы</a>
+        </li>
+      </ul>
     </nav>
 
   </header>
@@ -32,10 +43,84 @@
         <ul class="basic-information__list">
           <li class="basic-information__item">
             <label>
-              <span class="basic-information__item__label"></span>
-              <input class="basic-information__item__input" type="text" name="basic-information__item__input">
+              <span class="basic-information__item__label">имя:*</span>
+              <input class="basic-information__item__input" type="text" name="basic-information__item__input"
+                placeholder="барсик">
             </label>
           </li>
+          <li class="basic-information__item">
+            <label>
+              <span class="basic-information__item__label">Вес (кг):*</span>
+              <input class="basic-information__item__input" type="number" name="basic-information__item__input--number"
+                placeholder="7">
+            </label>
+          </li>
+          <li class="basic-information__item">
+            <label>
+              <span class="basic-information__item__label">Возраст (лет):</span>
+              <input class="basic-information__item__input" type="number" name="basic-information__item__input--number"
+                placeholder="7">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="program-selection">
+        <legend class="visually-hidden">выбор программы</legend>
+        <ul class="program-selection__list">
+          <li class="program-selection__item">
+            <label>
+              <input class="program-selection__item__input" type="radio" name="program-selection" value="slim" checked>
+              <span class="program-selection__item__label">похудение</span>
+            </label>
+          </li>
+          <li class="program-selection__item">
+            <label>
+              <input class="program-selection__item__input" type="radio" name="program-selection" value="plump">
+              <span class="program-selection__item__label">Набор массы</span>
+            </label>
+          </li>
+          <li class="program-selection__item">
+            <label>
+              <input class="program-selection__item__input" type="radio" name="program-selection" value="don't-know">
+              <span class="program-selection__item__label">Не знаю (Нужен ваш совет)</span>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="user-contacts">
+        <legend class="user-contacts__legend">Контактные данные (владельца кота)</legend>
+        <ul class="user-contacts__list">
+          <li class="user-contacts__item">
+            <label>
+              <span class="user-contacts__item__label">E-mail:*</span>
+              <input class="user-contacts__item__input" type="email" name="user-contacts__item__input--email"
+                placeholder="kuklachev@gmail.com">
+            </label>
+          </li>
+          <li class="user-contacts__item">
+            <label>
+              <span class="user-contacts__item__label">Телефон:*</span>
+              <input class="user-contacts__item__input" type="tel" name="user-contacts__item__input--tel"
+                placeholder="8 (960) 900-60-90">
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="user-comment">
+        <legend class="user-comment__legend">Комментарий</legend>
+        <textarea class="user-comment__input" name="user-comment__input" id="user-comment__input" cols="30" rows="10"
+          placeholder="Расскажите обо всех повАдках кота"></textarea>
+      </fieldset>
+      <fieldset class="additionally">
+        <legend class="additionally__legend">Дополнительно</legend>
+        <ul class="additionally__list">
+          <li class="additionally__item">
+            <label>
+              <input class="additionally__item__input" type="checkbox" name="">
+              <span class="additionally__item__labele"></span>
+            </label>
+          </li>
+
         </ul>
       </fieldset>
     </form>
