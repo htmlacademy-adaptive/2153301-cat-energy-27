@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2");
+  font-display: swap;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -9,4 +17,29 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.button-primery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 40px;
+  margin: 0 auto;
+  font-family: "Oswald";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(104, 183, 56, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.basic-text {
+  font-family: "Lato",sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(68, 68, 68, 1);
 }
