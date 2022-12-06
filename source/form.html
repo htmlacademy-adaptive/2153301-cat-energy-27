@@ -18,12 +18,12 @@
         <img src="img/logo-mobile-title.svg" width="101" height="18" alt="cat energy">
       </a>
       <nav class="header__main-nav main-nav">
-        <button class="main-nav__toogle main-nav__button-navigation" type="button">
-          <svg class="main-nav__button-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+        <button class="main-nav__toogle" type="button">
+          <svg class="main-nav__toogle-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
             width="24" height="18" fill="none" viewBox="0 0 24 18">
             <path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24" />
           </svg>
-          <span class="visually-hidden">открыть меню</span>
+          <span class="main-nav__text visually-hidden">открыть меню</span>
         </button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
@@ -57,14 +57,14 @@
           </li>
           <li class="basic-information__item">
             <label>
-              <span class="basic-information__label">Вес (кг):*</span>
+              <span class="basic-information__label">вес (кг):*</span>
               <input class="basic-information__input" type="number" name="basic-information-item__input--number"
                 placeholder="7" required>
             </label>
           </li>
           <li class="basic-information__item">
             <label>
-              <span class="basic-information__label">Возраст (лет):</span>
+              <span class="basic-information__label">возраст (лет):</span>
               <input class="basic-information__input" type="number" name="basic-information-item__input--number"
                 placeholder="7">
             </label>
@@ -151,7 +151,7 @@
       <button class="main-form__button button-primery" type="submit">отправить заявку</button>
       <span class="main-form__necessarily">* — Обязательные поля</span>
     </form>
-    <div class="cooperation">
+    <div class="cooperation cooperation--secondary">
       <p class="cooperation__text">приглашаем к сотрудничеству дилеров!</p>
       <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       <a href="#">
