@@ -1,10 +1,13 @@
 .example {
+  box-sizing: border-box;
   width: 320px;
+  padding: 25px 20px 40px 20px;
   background-color: rgba(234, 234, 234, 1);
 }
 
 .example__title {
-  margin: 25px auto 40px 20px;
+  margin-top: 0;
+  margin-bottom: 40px;
   font-family: @font-family-primary;
   font-size: 36px;
   line-height: 40px;
@@ -13,7 +16,7 @@
 }
 
 .example__text {
-  margin: 20px;
+  margin-bottom: 35px;
   font-family: @font-family-secondary;
   font-size: 14px;
   line-height: 18px;
@@ -27,6 +30,7 @@
 }
 
 .example__price {
+  margin: 0 53px;
   font-family: @font-family-primary;
   font-size: 14px;
   line-height: 20px;

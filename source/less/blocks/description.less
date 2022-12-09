@@ -3,6 +3,7 @@
 }
 
 .description__title {
+  margin: 0 0 40px 0;
   font-family: @font-family-primary;
   font-weight: 400;
   font-size: 36px;
@@ -11,21 +12,30 @@
   background-color: rgba(255, 255, 255, 1);
 }
 
-.description__text {
-  font-family: @font-family-secondary;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-  color: rgba(68, 68, 68, 1);
-}
-
 .description__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.description__list:last-child {
+  margin-bottom: 49px;
+}
+
 .description__item {
+  display: flex;
   width: 279px;
   margin-bottom: 20px;
+}
+
+.description__image {
+  margin-right: 20px;
+}
+
+.description__text {
+  font-family: @font-family-secondary;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(68, 68, 68, 1);
 }

@@ -1,17 +1,30 @@
 .list-features {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
   list-style-type: none;
 }
 
+.list-features__inner {
+  width: 124px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
 .list-features__termin {
+  width: 60px;
   font-family: @font-family-secondary;
   font-size: 12px;
   line-height: 100%;
   font-weight: 400;
   color: rgba(68, 68, 68, 1);
+  text-align: center;
 }
 
 .list-features__definition {
   margin: 0;
+  margin-bottom: 9px;
   padding: 0;
   font-family: @font-family-primary;
   font-size: 24px;
