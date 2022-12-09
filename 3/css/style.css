@@ -7,30 +7,8 @@
   justify-content: space-between;
   align-items: center;
 }
-.main-nav__list {
-  display: none;
-}
 .header__logo-title {
   margin: 23px auto 24px auto;
-}
-.main-nav__toogle {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: #ffffff;
-}
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  min-height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 .hero {
   width: 320px;
@@ -41,35 +19,18 @@
 }
 .hero__title {
   display: block;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
   color: #ffffff;
 }
 .hero__slogan {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   color: #ffffff;
-}
-.hero__button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 280px;
-  height: 40px;
-  margin: 0 auto;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #ffffff;
-  background-color: #68b738;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
 }
 .section-program {
   box-sizing: border-box;
@@ -80,20 +41,20 @@
   background-color: #f2f2f2;
 }
 .section-program__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
   text-transform: uppercase;
 }
 .section-program__content {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
 }
 .section-program__link {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -105,8 +66,8 @@
 .description {
   margin: 20px;
 }
-.description-title {
-  font-family: "Oswald", sans-serif;
+.description__title {
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
@@ -114,7 +75,7 @@
   background-color: #ffffff;
 }
 .description__text {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -135,7 +96,7 @@
 }
 .example__title {
   margin: 25px auto 40px 20px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
@@ -143,7 +104,7 @@
 }
 .example__text {
   margin: 20px;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -153,10 +114,17 @@
   margin: 0;
   padding: 0;
 }
+.example__price {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+}
 .cooperation {
   width: 320px;
 }
-.cooperation--primery {
+.cooperation--primary {
   background-color: #ffffff;
 }
 .cooperation--secondary {
@@ -166,7 +134,7 @@
   display: inline-block;
   width: 139px;
   margin: 26px 0 26px 19px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -177,80 +145,47 @@
   display: inline-block;
   width: 139px;
   margin: 26px 19px 26px 0;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: #444444;
 }
-.page-footer {
+.footer {
   width: 320px;
   background-color: #f2f2f2;
 }
-.html-academy__link {
-  font-family: "Lato", sans-serif;
+.footer__html-academy-link {
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 16px;
   line-height: 19px;
   font-weight: 400;
   color: #444444;
   text-decoration: none;
 }
-@font-face {
-  font-family: "Oswald";
-  font-style: regular;
-  font-weight: 400;
-  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Oswald";
-  font-style: medium;
-  font-weight: 500;
-  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Lato";
-  font-style: regular;
-  font-weight: 400;
-  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-.button-primery {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 280px;
   height: 40px;
   margin: 0 auto;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+.button--primary {
   color: #ffffff;
   background-color: #68b738;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: none;
 }
-.button-secondary {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 280px;
-  height: 40px;
-  margin: 0 auto;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+.button--secondary {
   color: #444444;
   background-color: #f2f2f2;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  border: none;
 }
 .social-list {
   display: flex;
@@ -265,7 +200,7 @@
 }
 .main-form__title {
   margin-left: 20px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -273,14 +208,14 @@
 }
 .main-form__secondary-title {
   margin-left: 20px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
 }
 .main-form__necessarily {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
@@ -297,7 +232,7 @@
 }
 .basic-information__label,
 .basic-information__input {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -314,7 +249,7 @@
   padding: 0;
 }
 .program-selection__label {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -331,7 +266,7 @@
   padding: 0;
 }
 .user-contacts__legend {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
@@ -340,7 +275,7 @@
 }
 .user-contacts__label,
 .user-contacts__input {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -352,14 +287,14 @@
   padding: 47px 20px 23px;
 }
 .user-comment__legend {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
   color: #000000;
 }
 .user-comment__input {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -371,7 +306,7 @@
   padding: 45px 20px 34px;
 }
 .additionally__legend {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
   font-weight: 400;
@@ -383,7 +318,7 @@
   padding: 0;
 }
 .additionally__label {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -394,7 +329,7 @@
   width: 320px;
 }
 .main-catalog__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -409,7 +344,7 @@
   background-repeat: no-repeat;
 }
 .main-catalog__promo-block-text {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -424,7 +359,7 @@
   text-decoration: none;
 }
 .product__card-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -433,14 +368,14 @@
 }
 .product__card-list-item-termin,
 .product__card-list-item-definition {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
   color: #444444;
 }
 .product__show-more-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -448,14 +383,14 @@
   text-transform: uppercase;
 }
 .product__show-more-text {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
   color: #444444;
 }
 .tying-products__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -467,7 +402,7 @@
   list-style-type: none;
 }
 .tying-products__item-title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -475,10 +410,44 @@
   text-transform: uppercase;
 }
 .tying-products__item-text {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
   color: #444444;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  min-height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2"), url("../fonts/oswald/oswaldregular.woff") format("woff");
+  font-weight: 400;
+  font-style: regular;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2"), url("../fonts/oswald/oswaldmedium.woff") format("woff");
+  font-weight: 500;
+  font-style: medium;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2"), url("../fonts/lato/Lato-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: regular;
+  font-display: swap;
 }
 /*# sourceMappingURL=style.css.map */
