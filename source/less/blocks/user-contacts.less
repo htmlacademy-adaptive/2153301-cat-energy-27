@@ -1,8 +1,8 @@
 .user-contacts {
   margin: 0;
-  padding: 50px 36px 38px 20px;
+  padding: 0 20px 9px;
+  border: none;
 }
-
 
 .user-contacts__list {
   list-style-type: none;
@@ -11,11 +11,27 @@
 }
 
 .user-contacts__legend {
+  margin-bottom: 35px;
   .form-legend();
   padding: 0;
 }
 
-.user-contacts__label,
+.user-contacts__label {
+  display: flex;
+  align-items: center;
+}
+
+.user-contacts__title {
+  margin-right: 10px;
+  white-space: nowrap;
+  .form-input-font-prime();
+}
+
 .user-contacts__input {
+  width: 100%;
+  min-height: 45px;
+  margin: 0;
+  margin-bottom: 14px;
+  border: 1px solid rgba(231, 231, 231, 1);
   .form-input-font-prime();
 }

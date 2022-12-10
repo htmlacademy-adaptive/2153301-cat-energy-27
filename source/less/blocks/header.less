@@ -1,14 +1,31 @@
 .header {
-  width: 320px;
-}
-
-.header__wrapper {
-  margin: 0 20px;
+  width: 100%;
+  height: 66px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.header__logo-title {
-  margin: 21px auto 22px auto;
+@media (min-width: @tablet-width) {
+  .header {
+    justify-content: space-between;
+  }
 }
+
+.header__logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 256px;
+  height: 66px;
+}
+
+@media (min-width: @tablet-width) {
+  .header__logo {
+    justify-content: space-between;
+    width: 174px;
+    height: 52px;
+    margin-right: 93px;
+    margin-left: 30px;
+  }
+}
+

@@ -11,34 +11,30 @@
 <body class="page__body">
 
   <header class="header">
-    <div class="header__wrapper">
-      <a class="header__logo" href="index.html">
-        <img src="img/logo-mobile.svg" width="33" height="38" alt="логотип cat energy">
-      </a>
-      <a class="header__logo-title" href="#">
-        <img src="img/logo-mobile-title.svg" width="101" height="18" alt="cat energy">
-      </a>
-      <nav class="header__main-nav main-nav">
-        <button class="main-nav__toogle" type="button">
-          <svg class="main-nav__toogle-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
-            width="24" height="18" fill="none" viewBox="0 0 24 18">
-            <path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24" />
-          </svg>
-          <span class="main-nav__text visually-hidden">открыть меню</span>
-        </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">подбор программы</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <a class="header__logo" href="index.html">
+      <img src="img/logo-mobile.svg" width="33" height="38" alt="логотип cat energy">
+      <img src="img/logo-mobile-title.svg" width="101" height="18" alt="cat energy">
+    </a>
+    <nav class="header__main-nav main-nav">
+      <button class="main-nav__toogle" type="button">
+        <svg class="main-nav__toogle-image" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+          width="24" height="18" fill="none" viewBox="0 0 24 18">
+          <path stroke="#000" stroke-width="1.5" d="M0 1.25h24M0 9.25h24M0 17.25h24" />
+        </svg>
+        <span class="main-nav__text visually-hidden">открыть меню</span>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="index.html">главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">каталог продукции</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">подбор программы</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
 
@@ -50,22 +46,22 @@
         <legend class="visually-hidden">основная информация</legend>
         <ul class="basic-information__list">
           <li class="basic-information__item">
-            <label>
-              <span class="basic-information__label">имя:*</span>
+            <label class="basic-information__label">
+              <span class="basic-information__title">имя:*</span>
               <input class="basic-information__input" type="text" name="basic-information-item__input"
                 placeholder="барсик" required>
             </label>
           </li>
           <li class="basic-information__item">
-            <label>
-              <span class="basic-information__label">вес (кг):*</span>
+            <label class="basic-information__label">
+              <span class="basic-information__title">вес (кг):*</span>
               <input class="basic-information__input" type="number" name="basic-information-item__input--number"
                 placeholder="7" required>
             </label>
           </li>
           <li class="basic-information__item">
-            <label>
-              <span class="basic-information__label">возраст (лет):</span>
+            <label class="basic-information__label">
+              <span class="basic-information__title">возраст (лет):</span>
               <input class="basic-information__input" type="number" name="basic-information-item__input--number"
                 placeholder="7">
             </label>
@@ -78,19 +74,19 @@
           <li class="program-selection__item">
             <label>
               <input class="program-selection__input" type="radio" name="program-selection" value="slim" checked>
-              <span class="program-selection__label">похудение</span>
+              <span class="program-selection__title">похудение</span>
             </label>
           </li>
           <li class="program-selection__item">
             <label>
               <input class="program-selection__input" type="radio" name="program-selection" value="plump">
-              <span class="program-selection__label">Набор массы</span>
+              <span class="program-selection__title">Набор массы</span>
             </label>
           </li>
           <li class="program-selection__item">
             <label>
               <input class="program-selection__input" type="radio" name="program-selection" value="don't-know">
-              <span class="program-selection__label">Не знаю (Нужен ваш совет)</span>
+              <span class="program-selection__title">Не знаю (Нужен ваш совет)</span>
             </label>
           </li>
         </ul>
@@ -99,15 +95,15 @@
         <legend class="user-contacts__legend">Контактные данные (владельца кота)</legend>
         <ul class="user-contacts__list">
           <li class="user-contacts__item">
-            <label>
-              <span class="user-contacts__label">E-mail:*</span>
+            <label class="user-contacts__label">
+              <span class="user-contacts__title">E-mail:*</span>
               <input class="user-contacts__input" type="email" name="user-contacts-item__input--email"
                 placeholder="kuklachev@gmail.com" required>
             </label>
           </li>
           <li class="user-contacts__item">
-            <label>
-              <span class="user-contacts__label">Телефон:*</span>
+            <label class="user-contacts__label">
+              <span class="user-contacts__title">Телефон:*</span>
               <input class="user-contacts__input" type="tel" name="user-contacts-item__input--tel"
                 placeholder="8 (960) 900-60-90" required>
             </label>
@@ -124,27 +120,27 @@
         <legend class="additionally__legend">Дополнительно</legend>
         <ul class="additionally__list">
           <li class="additionally__item">
-            <label>
+            <label class="additionally__label">
               <input class="additionally__input" type="checkbox" name="sweetener" checked>
-              <span class="additionally__label">сахарозаменитель</span>
+              <span class="additionally__title">сахарозаменитель</span>
             </label>
           </li>
           <li class="additionally__item">
-            <label>
+            <label class="additionally__label">
               <input class="additionally__input" type="checkbox" name="drinking water">
-              <span class="additionally__label">питьевая вода</span>
+              <span class="additionally__title">питьевая вода</span>
             </label>
           </li>
           <li class="additionally__item">
-            <label>
+            <label class="additionally__label">
               <input class="additionally__input" type="checkbox" name="milk">
-              <span class="additionally__label">молоко</span>
+              <span class="additionally__title">молоко</span>
             </label>
           </li>
           <li class="additionally__item">
-            <label>
+            <label class="additionally__label">
               <input class="additionally__input" type="checkbox" name="vitamin">
-              <span class="additionally__label">витамины</span>
+              <span class="additionally__title">витамины</span>
             </label>
           </li>
         </ul>
