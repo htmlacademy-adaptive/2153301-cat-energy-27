@@ -4,11 +4,17 @@
   list-style-type: none;
 }
 
+.product__card {
+  display: grid;
+  grid-template-columns: 140px 140px;
+}
+
 .product__card-title-link {
   text-decoration: none;
 }
 
 .product__card-title {
+  margin: 0;
   font-family: @font-family-primary;
   font-size: 16px;
   line-height: 20px;
@@ -17,8 +23,17 @@
   text-transform: uppercase;
 }
 
+.product__card-list {
+  list-style-type: none;
+}
+
+.product__card-list-item {
+  display: flex;
+}
+
 .product__card-list-item-termin,
 .product__card-list-item-definition {
+  margin: 0;
   font-family: @font-family-secondary;
   font-size: 12px;
   line-height: 16px;
