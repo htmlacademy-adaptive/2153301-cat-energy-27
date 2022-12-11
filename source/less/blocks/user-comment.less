@@ -1,17 +1,37 @@
 .user-comment {
   margin: 0;
-  padding: 0 20px 0;
+  padding: 0 20px 23px;
   border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .user-comment {
+    padding: 0 67px 65px 70px;
+  }
 }
 
 .user-comment__legend {
   margin-bottom: 47px;
+  padding: 0;
   .form-legend();
 }
 
+@media (min-width: @tablet-width) {
+  .user-comment__legend {
+    margin-bottom: 76px;
+  }
+}
+
 .user-comment__input {
+  width: 280px;
   min-height: 151px;
-  margin-bottom: 23px;
   .form-input-font-prime();
   border: 1px solid rgba(231, 231, 231, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .user-comment__input {
+    width: 631px;
+    min-height: 174px;
+  }
 }

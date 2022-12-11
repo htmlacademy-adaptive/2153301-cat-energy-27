@@ -1,18 +1,24 @@
 .user-contacts {
   margin: 0;
-  padding: 0 20px 9px;
+  padding: 0 66px 45px 71px;
   border: none;
-}
-
-.user-contacts__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 }
 
 .user-contacts__legend {
   margin-bottom: 35px;
   .form-legend();
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .user-contacts__legend {
+    margin-bottom: 76px;
+  }
+}
+
+.user-contacts__list {
+  list-style-type: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -34,4 +40,11 @@
   margin-bottom: 14px;
   border: 1px solid rgba(231, 231, 231, 1);
   .form-input-font-prime();
+}
+
+@media (min-width: @tablet-width) {
+  .user-contacts__input {
+    min-height: 52px;
+    margin-bottom: 20px;
+  }
 }
