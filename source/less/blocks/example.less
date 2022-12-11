@@ -1,8 +1,15 @@
 .example {
   box-sizing: border-box;
   width: 320px;
-  padding: 25px 20px 40px 20px;
+  padding: 25px 20px 40px;
   background-color: rgba(234, 234, 234, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    width: @tablet-width;
+    padding: 43px 30px 101px;
+  }
 }
 
 .example__title {
@@ -15,6 +22,14 @@
   color: rgba(0, 0, 0, 1);
 }
 
+@media (min-width: @tablet-width) {
+  .example__title {
+    margin-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
 .example__text {
   margin-bottom: 35px;
   font-family: @font-family-secondary;
@@ -22,6 +37,13 @@
   line-height: 18px;
   font-weight: 400;
   color: rgba(68, 68, 68, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .example__list {

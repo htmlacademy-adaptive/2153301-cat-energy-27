@@ -1,10 +1,19 @@
 .hero {
   width: 320px;
   margin: 0;
+  position: relative;
   padding-top: 27px;
   background-image: url("../img/cat-hero.jpg");
   background-repeat: no-repeat;
   background-size: 320px 302px;
+}
+
+@media (min-width: @tablet-width) {
+  .hero {
+    width: @tablet-width;
+    padding-bottom: 526px;
+    background-image: none;
+  }
 }
 
 .hero__title {
@@ -19,6 +28,16 @@
   color: rgba(255, 255, 255, 1);
 }
 
+@media (min-width: @tablet-width) {
+  .hero__title {
+    text-align: start;
+    margin: 0 230px 41px 117px;
+    font-size: 60px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
 .hero__slogan {
   margin-bottom: 29px;
   text-align: center;
@@ -28,9 +47,61 @@
   font-size: 14px;
   line-height: 14px;
   color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .hero__slogan {
+    margin: 0 auto 49px 119px;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 1);
+    text-align: start;
+  }
 }
 
 .hero__image {
   display: block;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .hero__image {
+    position: absolute;
+    top: 240px;
+    left: 100px;
+    z-index: -1;
+    width: 632px;
+    height: 609px;
+  }
+}
+
+.hero__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 40px;
+  font-family: @font-family-primary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(104, 183, 56, 1);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .hero__button {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .hero__button {
+    margin-left: 120px;
+  }
 }

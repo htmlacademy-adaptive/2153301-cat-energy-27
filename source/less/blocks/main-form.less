@@ -4,6 +4,13 @@
   border-top: 1px solid rgba(217, 217, 217, 1);
 }
 
+@media (min-width: @tablet-width) {
+  .main-form {
+    width: @tablet-width;
+    border: none;
+  }
+}
+
 .main-form__title {
   margin: 27px auto 37px 20px;
   font-family: @font-family-primary;
@@ -13,6 +20,12 @@
   color: rgba(0, 0, 0, 1);
 }
 
+@media (min-width: @tablet-width) {
+  .main-form__title {
+    margin: 0 auto 54px 69px;
+  }
+}
+
 .main-form__secondary-title {
   margin: 0 74px 39px 20px;
   font-family: @font-family-primary;
@@ -20,6 +33,12 @@
   line-height: 18px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .main-form__secondary-title {
+    margin: 0 auto 66px 70px;
+  }
 }
 
 .main-form__necessarily {

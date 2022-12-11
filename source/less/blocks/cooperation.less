@@ -2,6 +2,12 @@
   width: 320px;
 }
 
+@media (min-width: @tablet-width) {
+  .cooperation {
+    width: @tablet-width;
+  }
+}
+
 .cooperation--primary {
   background-color: rgba(255, 255, 255, 1);
 }
@@ -22,6 +28,14 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .cooperation__text {
+    font-size: 20px;
+    line-height: 26px;
+    margin: 60px 296px 56px 70px;
+  }
+}
+
 .cooperation__address {
   display: inline-block;
   width: 139px;
@@ -31,4 +45,13 @@
   line-height: 20px;
   font-weight: 400;
   color: rgba(68, 68, 68, 1);
+  text-align: end;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__address {
+    width: 160px;
+    margin-right: 70px;
+    font-size: 16px;
+  }
 }
