@@ -1,4 +1,10 @@
+.tying-products {
+  padding-top: 25px;
+}
+
 .tying-products__title {
+  margin: 0;
+  margin-bottom: 36px;
   font-family: @font-family-primary;
   font-size: 24px;
   line-height: 24px;
@@ -7,18 +13,31 @@
 }
 
 .tying-products__list {
-  margin: 0;
+  margin: 0 20px;
   padding: 0;
   list-style-type: none;
+  border-top: 1px solid rgba(205, 205, 205, 1);
+}
+
+.tying-products__item {
+  padding-bottom: 19px;
+  border-bottom: 1px solid rgba(205, 205, 205, 1);
 }
 
 .tying-products__item-title {
+  margin: 13px 0;
   font-family: @font-family-primary;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
   color: rgba(34, 34, 34, 1);
   text-transform: uppercase;
+}
+
+.tying-products__item-inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .tying-products__item-text {

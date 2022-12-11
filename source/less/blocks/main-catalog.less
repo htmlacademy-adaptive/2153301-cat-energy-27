@@ -1,13 +1,12 @@
 .main-catalog {
   box-sizing: border-box;
   width: 320px;
-  padding: 27px 20px 0;
+  padding-top: 27px;
   border-top: 1px solid rgba(217, 217, 217, 1);
 }
 
 .main-catalog__title {
-  margin: 0;
-  margin-bottom: 41px;
+  margin: 0 auto 41px 20px;
   font-family: @font-family-primary;
   font-size: 36px;
   line-height: 36px;
@@ -16,8 +15,11 @@
 }
 
 .main-catalog__promo-block {
+  position: relative;
   width: 280px;
-  height: 290px;
+  margin: 35px 20px;
+  padding-top: 187px;
+  padding-bottom: 43px;
   background-color: rgba(104, 183, 56,);
   background-image: url("../img/promo-background.jpg");
   background-size: 280px 290px;
@@ -25,9 +27,24 @@
 }
 
 .main-catalog__promo-block-text {
+  width: 161px;
+  margin: 0 auto;
+  text-align: center;
   font-family: @font-family-secondary;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   color: rgba(255, 255, 255, 1);
+}
+
+.main-catalog__promo-block-text::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 59px;
+  width: 78px;
+  height: 80px;
+  background: url("../../img/promo-gift.svg");
+  background-size: 78px 80px;
 }
