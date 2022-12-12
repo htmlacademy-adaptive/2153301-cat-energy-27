@@ -5,12 +5,30 @@
   border-top: 1px solid rgba(235, 235, 235, 1);
 }
 
+@media (min-width: @tablet-width) {
+  .product__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    border: none;
+  }
+}
+
 .product__card {
   display: grid;
   grid-template-columns: 140px 140px;
   row-gap: 13px;
   padding: 19px 20px 25px;
   border-bottom: 1px solid rgba(235, 235, 235, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .product__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+  }
 }
 
 .product__card-image-link {
