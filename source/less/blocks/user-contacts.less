@@ -1,6 +1,6 @@
 .user-contacts {
   margin: 0;
-  padding: 0 66px 45px 71px;
+  padding: 0 20px 24px;
   border: none;
 }
 
@@ -8,6 +8,7 @@
   margin-bottom: 35px;
   .form-legend();
   padding: 0;
+  padding-top: 26px;
 }
 
 @media (min-width: @tablet-width) {
@@ -17,6 +18,8 @@
 }
 
 .user-contacts__list {
+  display: grid;
+  grid-template-columns: 1fr;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -37,7 +40,6 @@
   width: 100%;
   min-height: 45px;
   margin: 0;
-  margin-bottom: 14px;
   border: 1px solid rgba(231, 231, 231, 1);
   .form-input-font-prime();
 }

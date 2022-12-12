@@ -1,6 +1,6 @@
 .basic-information {
   margin: 0;
-  padding: 0 20px 24px 20px;
+  padding: 0 20px 24px;
   border: none;
   border-bottom: solid 1px rgba(217, 217, 217, 1);
 }
@@ -13,6 +13,9 @@
 }
 
 .basic-information__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 14px;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -33,7 +36,6 @@
   width: 100%;
   height: 45px;
   margin: 0;
-  margin-bottom: 14px;
   border: 1px solid rgba(231, 231, 231, 1);
   .form-input-font-prime();
 }
