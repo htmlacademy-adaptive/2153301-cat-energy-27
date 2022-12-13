@@ -4,6 +4,12 @@
   border: none;
 }
 
+@media (min-width: @tablet-width) {
+  .user-contacts {
+    padding: 0 66px 89px 68px;
+  }
+}
+
 .user-contacts__legend {
   margin-bottom: 35px;
   .form-legend();
@@ -20,9 +26,16 @@
 .user-contacts__list {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 14px;
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .user-contacts__list {
+    gap: 20px;
+  }
 }
 
 .user-contacts__label {
@@ -47,6 +60,5 @@
 @media (min-width: @tablet-width) {
   .user-contacts__input {
     min-height: 52px;
-    margin-bottom: 20px;
   }
 }

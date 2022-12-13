@@ -4,7 +4,13 @@
 
 @media (min-width: @tablet-width) {
   .description {
-    margin-top: 45px;
+    margin: 45px 30px 47px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description {
+    margin: 71px 110px 69px;
   }
 }
 
@@ -29,8 +35,15 @@
 
 @media (min-width: @tablet-width) {
   .description__list {
-    grid-template-columns: 249px 249px;
+    grid-template-columns: 1fr 1fr;
     gap: 37px 137px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 95px;
   }
 }
 
