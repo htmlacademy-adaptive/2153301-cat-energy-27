@@ -6,7 +6,13 @@
 
 @media (min-width: @tablet-width) {
   .additionally {
-    padding: 0 70px 72px;
+    padding: 0 70px 54px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additionally {
+    padding: 0 110px 61px;
   }
 }
 
@@ -35,9 +41,16 @@
   .additionally__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 32px;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .additionally__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 104px;
+  }
+}
 
 .additionally__label {
   display: flex;
@@ -58,4 +71,11 @@
   height: 30px;
   margin: 0;
   margin-right: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .additionally__input {
+    width: 40px;
+    height: 40px;
+  }
 }
