@@ -1,6 +1,7 @@
 .program-selection {
   margin: 0;
   padding: 22px 20px 19px;
+  box-sizing: border-box;
   border: none;
   border-bottom: 1px solid rgba(217, 217, 217, 1);
 }
@@ -8,8 +9,17 @@
 @media (min-width: @tablet-width) {
   .program-selection {
     margin: 0 67px 75px 71px;
-    padding: 25px 0 25px 28px;
+    padding: 25px 28px;
     border: 1px solid rgba(231, 231, 231, 1);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-selection {
+    width: 568px;
+    margin: 0 110px 69px 40px;
+    // display: inline-block;
+    display: inline;
   }
 }
 
