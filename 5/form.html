@@ -42,55 +42,57 @@
     <h1 class="main-form__title">Подбор программы</h1>
     <form class="main-form__form" action="https://echo.htmlacademy.ru/" method="get">
       <h2 class="main-form__secondary-title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
-      <fieldset class="basic-information">
-        <legend class="visually-hidden">основная информация</legend>
-        <ul class="basic-information__list">
-          <li class="basic-information__item">
-            <label class="basic-information__label">
-              <span class="basic-information__title">имя:*</span>
-              <input class="basic-information__input" type="text" name="basic-information-item__input"
-                placeholder="барсик" required>
-            </label>
-          </li>
-          <li class="basic-information__item">
-            <label class="basic-information__label">
-              <span class="basic-information__title">вес (кг):*</span>
-              <input class="basic-information__input" type="number" name="basic-information-item__input--number"
-                placeholder="7" required>
-            </label>
-          </li>
-          <li class="basic-information__item">
-            <label class="basic-information__label">
-              <span class="basic-information__title">возраст (лет):</span>
-              <input class="basic-information__input" type="number" name="basic-information-item__input--number"
-                placeholder="7">
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="program-selection">
-        <legend class="visually-hidden">выбор программы</legend>
-        <ul class="program-selection__list">
-          <li class="program-selection__item">
-            <label class="program-selection__label">
-              <input class="program-selection__input" type="radio" name="program-selection" value="slim" checked>
-              <span class="program-selection__title">похудение</span>
-            </label>
-          </li>
-          <li class="program-selection__item">
-            <label class="program-selection__label">
-              <input class="program-selection__input" type="radio" name="program-selection" value="plump">
-              <span class="program-selection__title">Набор массы</span>
-            </label>
-          </li>
-          <li class="program-selection__item">
-            <label class="program-selection__label">
-              <input class="program-selection__input" type="radio" name="program-selection" value="don't-know">
-              <span class="program-selection__title">Не знаю (Нужен ваш совет)</span>
-            </label>
-          </li>
-        </ul>
-      </fieldset>
+      <div class="header-form">
+        <fieldset class="basic-information">
+          <legend class="visually-hidden">основная информация</legend>
+          <ul class="basic-information__list">
+            <li class="basic-information__item">
+              <label class="basic-information__label">
+                <span class="basic-information__title">имя:*</span>
+                <input class="basic-information__input" type="text" name="basic-information-item__input"
+                  placeholder="барсик" required>
+              </label>
+            </li>
+            <li class="basic-information__item">
+              <label class="basic-information__label">
+                <span class="basic-information__title">вес (кг):*</span>
+                <input class="basic-information__input" type="number" name="basic-information-item__input--number"
+                  placeholder="7" required>
+              </label>
+            </li>
+            <li class="basic-information__item">
+              <label class="basic-information__label">
+                <span class="basic-information__title">возраст (лет):</span>
+                <input class="basic-information__input" type="number" name="basic-information-item__input--number"
+                  placeholder="7">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="program-selection">
+          <legend class="visually-hidden">выбор программы</legend>
+          <ul class="program-selection__list">
+            <li class="program-selection__item">
+              <label class="program-selection__label">
+                <input class="program-selection__input" type="radio" name="program-selection" value="slim" checked>
+                <span class="program-selection__title">похудение</span>
+              </label>
+            </li>
+            <li class="program-selection__item">
+              <label class="program-selection__label">
+                <input class="program-selection__input" type="radio" name="program-selection" value="plump">
+                <span class="program-selection__title">Набор массы</span>
+              </label>
+            </li>
+            <li class="program-selection__item">
+              <label class="program-selection__label">
+                <input class="program-selection__input" type="radio" name="program-selection" value="don't-know">
+                <span class="program-selection__title">Не знаю (Нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+      </div>
       <fieldset class="user-contacts">
         <legend class="user-contacts__legend">Контактные данные (владельца кота)</legend>
         <ul class="user-contacts__list">
