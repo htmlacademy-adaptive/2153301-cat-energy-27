@@ -1408,7 +1408,7 @@
   }
 }
 .main-nav__list {
-  display: none;
+  display: flex;
   flex-direction: column;
   position: absolute;
   z-index: 1;
