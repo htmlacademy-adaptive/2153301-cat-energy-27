@@ -10,10 +10,18 @@
 
 @media (min-width: @tablet-width) {
   .hero {
-    width: 621px;
-    margin-left: 117px;
+    width: @tablet-width;
+    padding-left: 117px;
     padding-bottom: 526px;
+    box-sizing: border-box;
     background-image: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero {
+    width: @desktop-width;
+    padding-left: 190px;
   }
 }
 
@@ -38,6 +46,12 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  .hero__title {
+    margin-bottom: 40px;
+  }
+}
+
 .hero__slogan {
   margin-bottom: 29px;
   text-align: center;
@@ -52,10 +66,17 @@
 
 @media (min-width: @tablet-width) {
   .hero__slogan {
+    margin-bottom: 49px;
     font-size: 20px;
     line-height: 20px;
     color: rgba(0, 0, 0, 1);
     text-align: start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero__slogan {
+    margin-bottom: 52px;
   }
 }
 
