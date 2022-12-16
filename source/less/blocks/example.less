@@ -6,11 +6,11 @@
   background-color: rgba(234, 234, 234, 1);
 }
 
-@media (min-width: @tablet-width) {
-  .example {
-     background-color: rgba(255, 255, 255, 1);
-  }
-}
+// @media (min-width: @tablet-width) {
+//   .example {
+//     background-color: rgba(255, 255, 255, 1);
+//   }
+// }
 
 .example__wrapper {
   width: 320px;
@@ -27,6 +27,7 @@
 
 @media (min-width: @desktop-width) {
   .example__wrapper {
+    width: @desktop-width;
     display: grid;
     grid-template-columns: 436px 560px;
     gap: 146px 224px;
