@@ -1,16 +1,23 @@
 .footer {
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   background-color: rgba(242, 242, 242, 1);
 }
 
+.footer__wrapper {
+  align-self: center;
+  width: 320px;
+}
+
 @media (min-width: @tablet-width) {
-  .footer {
+  .footer__wrapper {
     width: @tablet-width;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .footer {
+  .footer__wrapper {
     width: @desktop-width;
   }
 }

@@ -1,20 +1,13 @@
 .main-catalog {
-  box-sizing: border-box;
-  width: 320px;
+  display: flex;
+  flex-direction: column;
   padding-top: 27px;
   border-top: 1px solid rgba(217, 217, 217, 1);
 }
 
 @media (min-width: @tablet-width) {
   .main-catalog {
-    width: @tablet-width;
     border: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .main-catalog {
-    width: @desktop-width;
   }
 }
 
