@@ -1,12 +1,35 @@
 .hero {
   width: 320px;
+  align-self: center;
   margin: 0;
+  position: relative;
+  padding-top: 27px;
   background-image: url("../img/cat-hero.jpg");
   background-repeat: no-repeat;
   background-size: 320px 302px;
 }
 
+@media (min-width: @tablet-width) {
+  .hero {
+    width: @tablet-width;
+    padding-left: 117px;
+    padding-bottom: 526px;
+    box-sizing: border-box;
+    background-image: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero {
+    width: @desktop-width;
+    padding-left: 190px;
+  }
+}
+
 .hero__title {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 25px;
   display: block;
   font-family: @font-family-primary;
   font-weight: 400;
@@ -15,10 +38,89 @@
   color: rgba(255, 255, 255, 1);
 }
 
+@media (min-width: @tablet-width) {
+  .hero__title {
+    width: 416px;
+    margin-bottom: 40px;
+    text-align: start;
+    font-size: 60px;
+    line-height: 60px;
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+// @media (min-width: @desktop-width) {
+//   .hero__title {
+
+//   }
+// }
+
 .hero__slogan {
+  margin-bottom: 29px;
+  text-align: center;
+  display: block;
   font-family: @font-family-primary;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .hero__slogan {
+    margin-bottom: 49px;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 1);
+    text-align: start;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero__slogan {
+    margin-bottom: 52px;
+  }
+}
+
+.hero__image {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .hero__image {
+    position: absolute;
+    top: 240px;
+    left: 0;
+    z-index: -1;
+    width: 632px;
+    height: 609px;
+  }
+}
+
+.hero__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 40px;
+  margin: 0 auto;
+  font-family: @font-family-primary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(104, 183, 56, 1);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .hero__button {
+    margin-right: auto;
+    margin-left: 0;
+  }
 }

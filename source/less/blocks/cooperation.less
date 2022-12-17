@@ -1,5 +1,8 @@
 .cooperation {
-  width: 320px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .cooperation--primary {
@@ -10,10 +13,33 @@
   background-color: rgba(242, 242, 242, 1);
 }
 
+.cooperation__inner {
+  box-sizing: border-box;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 26px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__inner {
+    width: @tablet-width;
+    padding: 60px 70px 56px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cooperation__inner {
+    position: absolute;
+    width: 565px;
+    padding: 60px 80px 56px;
+  }
+}
+
 .cooperation__text {
   display: inline-block;
-  width: 139px;
-  margin: 26px 0 26px 19px;
+  width: 140px;
+  margin: 0;
   font-family: @font-family-primary;
   font-size: 16px;
   line-height: 20px;
@@ -22,13 +48,45 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .cooperation__text {
+    width: 172px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cooperation__text {
+    width: 163px;
+  }
+}
+
 .cooperation__address {
   display: inline-block;
-  width: 139px;
-  margin: 26px 19px 26px 0;
+  width: 140px;
+  margin: 0;
   font-family: @font-family-secondary;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: rgba(68, 68, 68, 1);
+  text-align: end;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__address {
+    width: 160px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cooperation__address {
+    width: 155px;
+  }
+}
+
+.cooperation__map {
+  width: 100%;
 }

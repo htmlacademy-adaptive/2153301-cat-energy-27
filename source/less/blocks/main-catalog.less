@@ -1,8 +1,18 @@
 .main-catalog {
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 27px;
+  border-top: 1px solid rgba(217, 217, 217, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .main-catalog {
+    border: none;
+  }
 }
 
 .main-catalog__title {
+  margin: 0 auto 41px 20px;
   font-family: @font-family-primary;
   font-size: 36px;
   line-height: 36px;
@@ -10,19 +20,18 @@
   color: rgba(0, 0, 0, 1);
 }
 
-.main-catalog__promo-block {
-  width: 280px;
-  height: 290px;
-  background-color: rgba(104, 183, 56,);
-  background-image: url("../img/promo-background.jpg");
-  background-size: 280px 290px;
-  background-repeat: no-repeat;
+@media (min-width: @tablet-width) {
+  .main-catalog__title {
+    margin: 0 auto 52px 30px;
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+  }
 }
 
-.main-catalog__promo-block-text {
-  font-family: @font-family-secondary;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 1);
+@media (min-width: @desktop-width) {
+  .main-catalog__title {
+    margin: 0 auto 85px 110px;
+  }
 }
