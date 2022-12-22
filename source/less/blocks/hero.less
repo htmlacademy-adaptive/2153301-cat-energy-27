@@ -1,12 +1,8 @@
 .hero {
-  width: 320px;
-  align-self: center;
-  margin: 0;
-  position: relative;
-  padding-top: 27px;
-  background-image: url("../img/cat-hero.jpg");
-  background-repeat: no-repeat;
-  background-size: 320px 302px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -24,6 +20,16 @@
     width: @desktop-width;
     padding-left: 190px;
   }
+}
+
+.hero__inner {
+  width: 320px;
+  margin: 0;
+  position: relative;
+  padding-top: 27px;
+  background-image: url("../img/cat-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 302px;
 }
 
 .hero__title {
@@ -48,12 +54,6 @@
     color: rgba(0, 0, 0, 1);
   }
 }
-
-// @media (min-width: @desktop-width) {
-//   .hero__title {
-
-//   }
-// }
 
 .hero__slogan {
   margin-bottom: 29px;
