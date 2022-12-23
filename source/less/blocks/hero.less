@@ -1,14 +1,16 @@
 .hero {
-  display: flex;
   width: 100%;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("../../img/cat-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 302px;
+  background-position: 50% 0;
 }
 
 @media (min-width: @tablet-width) {
   .hero {
-    width: @tablet-width;
-    padding-left: 117px;
     padding-bottom: 526px;
     box-sizing: border-box;
     background-image: none;
@@ -17,19 +19,39 @@
 
 @media (min-width: @desktop-width) {
   .hero {
-    width: @desktop-width;
-    padding-left: 190px;
+    padding-left: 0;
+  }
+}
+
+.hero__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 198px;
+  background-color: rgba(104, 183, 56, 0.85);
+}
+
+@media (min-width: @tablet-width) {
+  .hero__container {
+    width: 534px;
+    background-color: rgba(255, 255, 255, 1);
   }
 }
 
 .hero__inner {
   width: 320px;
   margin: 0;
-  position: relative;
   padding-top: 27px;
-  background-image: url("../img/cat-hero.jpg");
-  background-repeat: no-repeat;
-  background-size: 320px 302px;
+  padding-bottom: 164px;
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .hero__inner {
+    width: 100%;
+    padding-bottom: 0;
+  }
 }
 
 .hero__title {
@@ -55,8 +77,13 @@
   }
 }
 
+// @media (min-width: @desktop-width) {
+//   .hero__title {
+
+//   }
+// }
+
 .hero__slogan {
-  margin-bottom: 29px;
   text-align: center;
   display: block;
   font-family: @font-family-primary;
@@ -69,7 +96,6 @@
 
 @media (min-width: @tablet-width) {
   .hero__slogan {
-    margin-bottom: 49px;
     font-size: 20px;
     line-height: 20px;
     color: rgba(0, 0, 0, 1);
@@ -84,13 +110,12 @@
 }
 
 .hero__image {
-  display: block;
-  margin: 0 auto;
+  position: absolute;
+  bottom: -135px;
 }
 
 @media (min-width: @tablet-width) {
   .hero__image {
-    position: absolute;
     top: 240px;
     left: 0;
     z-index: -1;
@@ -100,12 +125,14 @@
 }
 
 .hero__button {
+  position: absolute;
+  bottom: -178px;
+  left: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 280px;
   height: 40px;
-  margin: 0 auto;
   font-family: @font-family-primary;
   font-weight: 400;
   font-size: 14px;
@@ -120,7 +147,13 @@
 
 @media (min-width: @tablet-width) {
   .hero__button {
+    bottom: -103px;
+    left: 0;
+    width: 244px;
+    height: 54px;
     margin-right: auto;
     margin-left: 0;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
