@@ -33,6 +33,7 @@
   .footer__inner {
     flex-direction: row;
     margin: 0 30px;
+    padding: 35px 0 34px;
   }
 }
 
@@ -43,13 +44,17 @@
 }
 
 .footer__logo-title-big-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
-  height: 44px;
-  padding: 40px;
+  height: 95px;
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
   .footer__logo-title-big-link {
+    width: min-content;
     margin-right: 142px;
   }
 }
@@ -86,6 +91,7 @@
 }
 
 .footer__html-academy-link {
+  align-self: stretch;
   display: flex;
   align-items: center;
   font-family: @font-family-secondary;
