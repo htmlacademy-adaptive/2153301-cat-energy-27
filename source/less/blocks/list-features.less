@@ -13,10 +13,21 @@
 }
 
 .list-features__inner {
+  position: relative;
   width: 124px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+  padding-top: 14px;
+}
+
+.list-features__inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 124px;
+  height: 56px;
+  background: url("../../img/list-features-inner-frame.svg");
 }
 
 @media (min-width: @tablet-width) {

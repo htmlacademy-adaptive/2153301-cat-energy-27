@@ -70,12 +70,14 @@
 
 .description__item {
   display: flex;
+  position: relative;
 }
 
 @media (min-width: @tablet-width) {
   .description__item {
     flex-direction: column;
     padding-top: 40px;
+    padding-bottom: 57px;
   }
 }
 
@@ -107,5 +109,23 @@
   .description__text {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.description__item-number {
+  position: absolute;
+  top: 0;
+  left: 118px;
+  z-index: -1;
+  font-family: "Oswald", sans-serif;
+  font-size: 280px;
+  line-height: 280px;
+  font-weight: 400;
+  color: rgba(242, 242, 242, 1);
+}
+
+@media (max-width: @mobile-width-only) {
+  .description__item-number {
+    display: none;
   }
 }
