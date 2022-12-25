@@ -6,21 +6,11 @@
 }
 
 @media (min-width: @tablet-width) {
-  .header {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .header {
-    width: @desktop-width;
-  }
-}
-
-@media (min-width: @tablet-width) {
   .header__inner {
+    display: flex;
+    justify-content: space-between;
     width: 708px;
+    position: relative;
   }
 }
 
@@ -39,14 +29,13 @@
 
 @media (min-width: @tablet-width) {
   .header__logo {
-    margin-right: 93px;
+    margin-right: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .header__logo {
-    margin-right: 538px;
-    margin-left: 110px;
+    margin-right: auto;
   }
 }
 

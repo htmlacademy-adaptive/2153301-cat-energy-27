@@ -45,8 +45,7 @@
 .footer__logo-title-big-link {
   box-sizing: border-box;
   height: 44px;
-  margin: 29px auto 23px;
-  padding: 10px 0;
+  padding: 40px;
 }
 
 @media (min-width: @tablet-width) {
@@ -59,6 +58,14 @@
   .footer__logo-title-big-link {
     margin-right: 414px;
   }
+}
+
+.footer__logo-title-big-link:hover {
+  opacity: 0.8;
+}
+
+.footer__logo-title-big-link:active {
+  opacity: 0.6;
 }
 
 .footer__social-list-wrapper {
@@ -74,11 +81,11 @@
   .footer__social-list-wrapper {
     border: none;
     align-self: center;
+    margin-right: auto;
   }
 }
 
 .footer__html-academy-link {
-  width: 100%;
   display: flex;
   align-items: center;
   font-family: @font-family-secondary;
@@ -95,6 +102,14 @@
   }
 }
 
+.footer__html-academy-link:hover .footer__html-academy-logo {
+  fill: rgba(104, 183, 56, 1);
+}
+
+.footer__html-academy-link:active {
+  opacity: 0.3;
+}
+
 .footer__html-academy-text {
   margin: 28px auto 31px 0;
 }
@@ -104,3 +119,8 @@
     margin-right: 23px;
   }
 }
+
+.footer__html-academy-logo {
+  fill: rgba(102, 102, 102, 1);
+}
+
