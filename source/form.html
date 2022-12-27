@@ -42,7 +42,8 @@
     </div>
     <form class="main-form__form" action="https://echo.htmlacademy.ru/" method="get">
       <div class="main-form__header-text-wrapper">
-        <span class="main-form__header-text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</span>
+        <span class="main-form__header-text">Заполните анкету, и мы подберем<br> программу питания для вашего
+          кота</span>
       </div>
       <div class="header-form">
         <fieldset class="basic-information fieldset-style">
@@ -77,19 +78,19 @@
             <li class="program-selection__item">
               <label class="program-selection__label">
                 <input class="program-selection__input" type="radio" name="program-selection" value="slim" checked>
-                <span class="program-selection__title">похудение</span>
+                <span class="program-selection__label-title">похудение</span>
               </label>
             </li>
             <li class="program-selection__item">
               <label class="program-selection__label">
                 <input class="program-selection__input" type="radio" name="program-selection" value="plump">
-                <span class="program-selection__title">Набор массы</span>
+                <span class="program-selection__label-title">Набор массы</span>
               </label>
             </li>
             <li class="program-selection__item">
               <label class="program-selection__label">
                 <input class="program-selection__input" type="radio" name="program-selection" value="don't-know">
-                <span class="program-selection__title">Не знаю (Нужен ваш совет)</span>
+                <span class="program-selection__label-title">Не знаю (Нужен ваш совет)</span>
               </label>
             </li>
           </ul>
@@ -152,8 +153,10 @@
           </li>
         </ul>
       </fieldset>
-      <button class="main-form__button button button--primary" type="submit">отправить заявку</button>
-      <span class="main-form__necessarily">* — Обязательные поля</span>
+      <div class="main-form__button-wrapper">
+        <button class="main-form__button button button--primary" type="submit">отправить заявку</button>
+        <span class="main-form__necessarily">* — Обязательные поля</span>
+      </div>
     </form>
     <div class="cooperation cooperation--secondary">
       <div class="cooperation__inner">
