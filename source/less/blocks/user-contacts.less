@@ -18,9 +18,20 @@
   }
 }
 
-.user-contacts__title {
-  width: 280px;
+.user-contacts__title-line {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 0 35px;
+}
+
+.user-contacts__title-wrapper {
+  width: 280px;
+}
+
+.user-contacts__title {
+  display: inline-block;
   .form-legend();
   padding: 0;
 }
@@ -38,15 +49,6 @@
   .user-contacts__title {
     width: 1220px;
   }
-}
-
-.user-contacts__title::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 1000%;
-  height: 2px;
-  background-color: .user-contacts__title;
 }
 
 .user-contacts__list {
