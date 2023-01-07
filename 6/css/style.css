@@ -173,7 +173,7 @@
 }
 @media (min-width: 1440px) {
   .hero__image {
-    top: 0;
+    top: 150px;
     left: 368px;
     width: 552px;
     height: 499px;
@@ -517,25 +517,34 @@
     margin-bottom: 16px;
   }
 }
+.example__price-wrapper {
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .example__price-wrapper {
+    text-align: end;
+  }
+}
+@media (min-width: 1440px) {
+  .example__price-wrapper {
+    text-align: start;
+  }
+}
 .example__price {
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: #000000;
-  text-align: center;
   text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .example__price {
     font-size: 20px;
-    text-align: end;
   }
 }
-@media (min-width: 1440px) {
-  .example__price {
-    text-align: start;
-  }
+.price {
+  margin-left: 63px;
 }
 .example__before-after {
   margin: 0;
@@ -2226,7 +2235,7 @@
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   line-height: 20px;
-  font-weight: 500;
+  font-weight: 400;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
