@@ -19,27 +19,61 @@
   }
 }
 
-.additionally__title {
+.additionally__title-wrapper {
   width: 280px;
   margin: 0 0 34px;
-  padding: 0;
-  .form-legend();
 }
 
-// fff
-
 @media (min-width: @tablet-width) {
-  .additionally__title {
+  .additionally__title-wrapper {
     width: 628px;
     margin-bottom: 62px;
-    font-size: 36px;
-    line-height: 36px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .additionally__title {
+  .additionally__title-wrapper {
     width: 1220px;
+  }
+}
+
+.additionally__title-inner {
+  position: relative;
+  width: 141px;
+  margin-left: -20px;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .additionally__title-inner {
+    width: 211px;
+    margin-left: -40px;
+    padding: 0 40px;
+  }
+}
+
+.additionally__title-inner::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -1000px;
+  height: 2px;
+  width: 10000%;
+  background-color: rgba(104, 183, 56, 1);
+  z-index: -1;
+}
+
+.additionally__title {
+  margin: 0;
+  padding: 0;
+  .form-legend();
+}
+
+@media (min-width: @tablet-width) {
+  .additionally__title {
+    font-size: 36px;
+    line-height: 36px;
   }
 }
 

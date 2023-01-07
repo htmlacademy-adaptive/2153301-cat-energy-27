@@ -37,6 +37,33 @@
   }
 }
 
+.user-comment__title-inner {
+  position: relative;
+  width: 121px;
+  margin-left: -20px;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .user-comment__title-inner {
+    width: 182px;
+    margin-left: -40px;
+    padding: 0 40px;
+  }
+}
+
+.user-comment__title-inner::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -1000px;
+  height: 2px;
+  width: 10000%;
+  background-color: rgba(104, 183, 56, 1);
+  z-index: -1;
+}
+
 .user-comment__title {
   display: inline;
   position: relative;
@@ -51,17 +78,6 @@
     font-size: 36px;
     line-height: 36px;
   }
-}
-
-.user-comment__title::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: -1000px;
-  height: 2px;
-  width: 1000%;
-  background-color: rgba(104, 183, 56, 1);
-  z-index: -1;
 }
 
 .user-comment__input {
