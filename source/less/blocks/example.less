@@ -107,27 +107,45 @@
   }
 }
 
+.example__price-wrapper {
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .example__price-wrapper {
+    text-align: end;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__price-wrapper {
+    text-align: start;
+  }
+}
+
 .example__price {
   font-family: @font-family-primary;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: rgba(0, 0, 0, 1);
-  text-align: center;
   text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
   .example__price {
     font-size: 20px;
-    text-align: end;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .example__price {
-    text-align: start;
-  }
+// @media (min-width: @desktop-width) {
+//   .example__price {
+//     text-align: start;
+//   }
+// }
+
+.price {
+  margin-left: 63px;
 }
 
 .example__before-after {
