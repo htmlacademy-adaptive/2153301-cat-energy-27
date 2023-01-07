@@ -99,7 +99,9 @@
       <fieldset class="user-contacts fieldset-style">
         <legend class="visually-hidden">Контактные данные</legend>
         <div class="user-contacts__title-wrapper">
-          <h2 class="user-contacts__title">Контактные данные (владельца кота)</h2>
+          <div class="user-contacts__title-inner">
+            <h2 class="user-contacts__title">Контактные данные (владельца кота)</h2>
+          </div>
         </div>
         <ul class="user-contacts__list">
           <li class="user-contacts__item">
@@ -120,7 +122,11 @@
       </fieldset>
       <fieldset class="user-comment fieldset-style">
         <legend class="visually-hidden">Комментарий</legend>
-        <h2 class="user-comment__title">Комментарий</h2>
+        <div class="user-comment__title-wrapper">
+          <div class="user-comment__title-inner">
+            <h2 class="user-comment__title">Комментарий</h2>
+          </div>
+        </div>
         <textarea class="user-comment__input" name="user-comment__input" id="user-comment__input" cols="40" rows="8"
           placeholder="Расскажите обо всех повАдках кота">
         </textarea>
