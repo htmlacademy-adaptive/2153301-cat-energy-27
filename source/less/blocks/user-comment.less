@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   margin: 0;
-  padding: 0 20px 23px;
+  padding: 0 0 23px;
   border: none;
+  overflow: hidden;
 }
 
 @media (min-width: @tablet-width) {
@@ -14,19 +15,68 @@
 
 @media (min-width: @desktop-width) {
   .user-comment {
-    padding: 0 110px 67px;
+    padding: 0 0 67px;
   }
 }
 
-.user-comment__legend {
-  margin-bottom: 47px;
-  padding: 0;
-  .form-legend();
+.user-comment__title-wrapper {
+  width: 280px;
+  margin: 0 0 37px;
 }
 
 @media (min-width: @tablet-width) {
-  .user-comment__legend {
+  .user-comment__title-wrapper {
+    width: 628px;
     margin-bottom: 76px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-comment__title-wrapper {
+    width: 1220px;
+  }
+}
+
+.user-comment__title-inner {
+  position: relative;
+  width: 121px;
+  margin-left: -20px;
+  padding: 0 20px;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .user-comment__title-inner {
+    width: 182px;
+    margin-left: -40px;
+    padding: 0 40px;
+  }
+}
+
+.user-comment__title-inner::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -1000px;
+  height: 2px;
+  width: 10000%;
+  background-color: rgba(104, 183, 56, 1);
+  z-index: -1;
+}
+
+.user-comment__title {
+  display: inline;
+  position: relative;
+  .form-legend();
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .user-comment__title {
+    font-size: 36px;
+    line-height: 36px;
   }
 }
 
@@ -39,7 +89,13 @@
 
 @media (min-width: @tablet-width) {
   .user-comment__input {
-    width: 100%;
+    width: 628px;
     min-height: 174px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-comment__input {
+    width: 1220px;
   }
 }

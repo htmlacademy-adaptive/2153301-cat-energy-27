@@ -31,8 +31,11 @@
 @media (min-width: @desktop-width) {
   .cooperation__inner {
     position: absolute;
+    top: 95px;
+    left: 110px;
     width: 565px;
     padding: 60px 80px 56px;
+    background-color: rgba(255, 255, 255, 1);
   }
 }
 
@@ -87,6 +90,20 @@
   }
 }
 
-.cooperation__map {
+.cooperation__map-wrapper {
   width: 100%;
+  height: 362px;
+}
+
+@media (min-width: @tablet-width) {
+  .cooperation__map-wrapper {
+    height: 400px;
+  }
+}
+
+.cooperation__map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
 }

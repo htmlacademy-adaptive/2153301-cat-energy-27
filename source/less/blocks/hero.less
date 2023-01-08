@@ -1,18 +1,12 @@
 .hero {
-  width: 320px;
-  align-self: center;
-  margin: 0;
-  position: relative;
-  padding-top: 27px;
-  background-image: url("../img/cat-hero.jpg");
-  background-repeat: no-repeat;
-  background-size: 320px 302px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width: @tablet-width) {
   .hero {
-    width: @tablet-width;
-    padding-left: 117px;
     padding-bottom: 526px;
     box-sizing: border-box;
     background-image: none;
@@ -21,8 +15,93 @@
 
 @media (min-width: @desktop-width) {
   .hero {
-    width: @desktop-width;
-    padding-left: 190px;
+    position: relative;
+    top: -116px;
+    z-index: -1;
+    padding-bottom: 0;
+  }
+}
+
+.hero__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 198px;
+  box-sizing: border-box;
+  position: relative;
+  background-color: rgba(104, 183, 56, 0.85);
+}
+
+@media (min-width: @tablet-width) {
+  .hero__container {
+    margin-bottom: 0;
+    background-color: rgba(255, 255, 255, 1);
+  }
+}
+
+.hero__container::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/cat-hero.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/cat-hero@2x.jpg");
+    background-size: 320px auto;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .hero__container::after {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero__container::after {
+    display: block;
+    left: 50%;
+    width: 50%;
+    background-color: rgba(104, 183, 56, 0.85);
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/big-cat-hero.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 1044px auto;
+    z-index: 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/big-cat-hero@2x.jpg");
+    }
+  }
+}
+
+.hero__inner {
+  width: 320px;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 164px;
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .hero__inner {
+    width: 534px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .hero__inner {
+    width: 1060px;
+    padding-top: 223px;
+    padding-bottom: 185px;
   }
 }
 
@@ -49,14 +128,7 @@
   }
 }
 
-// @media (min-width: @desktop-width) {
-//   .hero__title {
-
-//   }
-// }
-
 .hero__slogan {
-  margin-bottom: 29px;
   text-align: center;
   display: block;
   font-family: @font-family-primary;
@@ -69,7 +141,7 @@
 
 @media (min-width: @tablet-width) {
   .hero__slogan {
-    margin-bottom: 49px;
+    margin-bottom: 52px;
     font-size: 20px;
     line-height: 20px;
     color: rgba(0, 0, 0, 1);
@@ -77,35 +149,41 @@
   }
 }
 
-@media (min-width: @desktop-width) {
-  .hero__slogan {
-    margin-bottom: 52px;
-  }
-}
-
 .hero__image {
-  display: block;
-  margin: 0 auto;
+  position: absolute;
+  bottom: -135px;
 }
 
 @media (min-width: @tablet-width) {
   .hero__image {
-    position: absolute;
     top: 240px;
     left: 0;
-    z-index: -1;
+    z-index: 0;
     width: 632px;
     height: 609px;
   }
 }
 
+@media (min-width: @desktop-width) {
+  .hero__image {
+    top: 150px;
+    left: 368px;
+    width: 552px;
+    height: 499px;
+    z-index: 1;
+  }
+}
+
 .hero__button {
+  position: absolute;
+  bottom: -178px;
+  left: 20px;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 280px;
   height: 40px;
-  margin: 0 auto;
   font-family: @font-family-primary;
   font-weight: 400;
   font-size: 14px;
@@ -118,9 +196,30 @@
   border: none;
 }
 
+.hero__button:hover {
+  background-color: rgba(94, 170, 47, 1);
+}
+
+.hero__button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 @media (min-width: @tablet-width) {
   .hero__button {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 244px;
+    height: 54px;
     margin-right: auto;
     margin-left: 0;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
+
+// @media (min-width: @desktop-width) {
+//   .hero__button {
+//     z-index: 5;
+//   }
+// }

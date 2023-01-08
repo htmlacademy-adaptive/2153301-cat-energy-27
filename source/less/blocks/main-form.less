@@ -1,7 +1,7 @@
 .main-form {
   display: flex;
   flex-direction: column;
-  background-color: rgba(255, 255, 255, 1);
+  padding-top: 27px;
   border-top: 1px solid rgba(217, 217, 217, 1);
 }
 
@@ -11,8 +11,28 @@
   }
 }
 
+.main-form__title-wrapper {
+  align-self: center;
+  width: 280px;
+  margin-bottom: 37px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-form__title-wrapper {
+    width: 628px;
+    margin-bottom: 54px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-form__title-wrapper {
+    width: 1220px;
+    margin-bottom: 56px;
+  }
+}
+
 .main-form__title {
-  margin: 27px auto 37px 20px;
+  margin: 0;
   font-family: @font-family-primary;
   font-size: 36px;
   line-height: 36px;
@@ -22,12 +42,36 @@
 
 @media (min-width: @tablet-width) {
   .main-form__title {
-    margin: 0 auto 54px 69px;
+    font-size: 60px;
+    line-height: 60px;
   }
 }
 
-.main-form__secondary-title {
-  margin: 0 74px 39px 20px;
+.main-form__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-form__header-text-wrapper {
+  align-self: center;
+  width: 280px;
+  margin-bottom: 39px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-form__header-text-wrapper {
+    width: 628px;
+    margin-bottom: 66px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-form__header-text-wrapper {
+    width: 1220px;
+  }
+}
+
+.main-form__header-text {
   font-family: @font-family-primary;
   font-size: 14px;
   line-height: 18px;
@@ -36,8 +80,46 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-form__secondary-title {
-    margin: 0 auto 66px 70px;
+  .main-form__header-text {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-form__button-wrapper {
+    align-self: center;
+    width: 628px;
+    margin-bottom: 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-form__button-wrapper {
+    width: 1220px;
+    margin-bottom: 82px;
+    gap: 84px;
+  }
+}
+
+.main-form__button {
+  margin-bottom: 21px;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .main-form__button {
+    width: 282px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-form__button {
+    width: 568px;
   }
 }
 
@@ -52,6 +134,10 @@
   color: rgba(0, 0, 0, 1);
 }
 
-.main-form__button {
-  margin-bottom: 21px;
+@media (min-width: @tablet-width) {
+  .main-form__necessarily {
+    margin: 0;
+    text-align: start;
+    font-size: 16px;
+  }
 }
