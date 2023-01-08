@@ -102,6 +102,25 @@
   color: rgba(0, 0, 0, 1);
   text-decoration: none;
   text-transform: uppercase;
+  background-image: url("../../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 100px center;
+  background-size: 24px 12px;
+}
+
+@media (min-width: @tablet-width) {
+  .section-program__link  {
+    background-position: 130px center;
+  }
+}
+
+.section-program__link:hover {
+  background-image: url("../../img/arrow-hover.svg");
+  background-size: 32px 12px;
+}
+
+.section-program__link:active {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
