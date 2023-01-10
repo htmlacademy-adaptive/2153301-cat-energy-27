@@ -198,9 +198,13 @@
   padding-bottom: 43px;
   box-sizing: border-box;
   background-color: rgba(104, 183, 56, 0.85);
-  background-image: url("../img/promo-background.jpg");
+  background-image: url("../../img/promo/promo-background.jpg");
   background-size: 280px 290px;
   background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/promo/promo-background@2x.jpg");
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -257,7 +261,7 @@
   top: 59px;
   width: 78px;
   height: 80px;
-  background: url("../../img/promo-gift.svg");
+  background: url("../../img/promo/promo-gift.svg");
   background-size: 78px 80px;
 }
 
