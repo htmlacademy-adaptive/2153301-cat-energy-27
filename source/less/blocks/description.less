@@ -63,31 +63,103 @@
 }
 
 .description__item {
-  display: flex;
   position: relative;
+  min-height: 60px;
+  padding-left: 80px;
 }
 
 @media (min-width: @tablet-width) {
   .description__item {
     flex-direction: column;
-    padding-top: 40px;
-    padding-bottom: 57px;
+    padding: 151px 0 57px;
   }
 }
 
-.description__image {
-  margin-right: 20px;
+.description__item--1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../../img/description-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px 60px;
 }
 
 @media (min-width: @tablet-width) {
-  .description__image {
-    margin: 0 0 31px 0;
+  .description__item--1::after {
+    top: 40px;
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
   }
 }
 
+.description__item--2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../../img/description-2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px 60px;
+}
+
 @media (min-width: @tablet-width) {
-  .description__image {
-    transform: scale(1.33);
+  .description__item--2::after {
+    top: 40px;
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+  }
+}
+
+.description__item--3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../../img/description-3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px 60px;
+}
+
+@media (min-width: @tablet-width) {
+  .description__item--3::after {
+    top: 40px;
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
+  }
+}
+
+.description__item--4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: url("../../img/description-4.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60px 60px;
+}
+
+@media (min-width: @tablet-width) {
+  .description__item--4::after {
+    top: 40px;
+    width: 80px;
+    height: 80px;
+    background-size: 80px 80px;
   }
 }
 
