@@ -111,6 +111,7 @@
 }
 
 .user-contacts__label {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -141,5 +142,31 @@
     min-height: 52px;
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+.user-contacts__input-icon-letter {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+@media (min-width: @tablet-width) {
+  .user-contacts__input-icon-letter {
+    top: 19px;
+    right: 16px;
+  }
+}
+
+.user-contacts__input-icon-tel {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+@media (min-width: @tablet-width) {
+  .user-contacts__input-icon-tel {
+    top: 18px;
+    right: 16px;
   }
 }
