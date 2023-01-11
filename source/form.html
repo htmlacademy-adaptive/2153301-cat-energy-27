@@ -67,14 +67,14 @@
             <li class="basic-information__item">
               <label class="basic-information__label">
                 <span class="basic-information__title">вес (кг):*</span>
-                <input class="basic-information__input" type="number" name="basic-information-item__input--number"
+                <input class="basic-information__input basic-information__input-number" type="number" name="basic-information-item__input--number"
                   placeholder="7" required>
               </label>
             </li>
             <li class="basic-information__item">
               <label class="basic-information__label">
                 <span class="basic-information__title">возраст (лет):</span>
-                <input class="basic-information__input" type="number" name="basic-information-item__input--number"
+                <input class="basic-information__input  basic-information__input-number" type="number" name="basic-information-item__input--number"
                   placeholder="7">
               </label>
             </li>
@@ -86,7 +86,7 @@
             <li class="program-selection__item">
               <label class="program-selection__label">
                 <span class="visually-hidden">Выбрать программу похудения</span>
-                <input class="program-selection__input visually-hidden" type="radio" name="program-selection" value="slim" checked >
+                <input class="program-selection__input visually-hidden" type="radio" name="program-selection" value="slim" checked>
                 <span class="program-selection__control-mark"></span>
                 <span class="program-selection__label-title">похудение</span>
               </label>
@@ -94,7 +94,7 @@
             <li class="program-selection__item">
               <label class="program-selection__label">
                 <span class="visually-hidden">Выбрать программу набора массы</span>
-                <input class="program-selection__input visually-hidden" type="radio" name="program-selection" value="plump">
+                <input class="program-selection__input visually-hidden" type="radio" name="program-selection" value="plump" disabled>
                 <span class="program-selection__control-mark"></span>
                 <span class="program-selection__label-title">Набор массы</span>
               </label>
@@ -162,28 +162,37 @@
             <h2 class="additionally__title">Дополнительно</h2>
           </div>
         </div>
+
         <ul class="additionally__list">
           <li class="additionally__item">
             <label class="additionally__label">
+              <span class="visually-hidden">добавить в корзину сахарозаменитель</span>
               <input class="additionally__input" type="checkbox" name="sweetener" checked>
+              <span class="additionally__control-mark"></span>
               <span class="additionally__label-title">сахарозаменитель</span>
             </label>
           </li>
           <li class="additionally__item">
             <label class="additionally__label">
-              <input class="additionally__input" type="checkbox" name="drinking water">
+              <span class="visually-hidden">добавить в корзину питьевую воду</span>
+              <input class="additionally__input" type="checkbox" name="drinking water" disabled>
+              <span class="additionally__control-mark"></span>
               <span class="additionally__label-title">питьевая вода</span>
             </label>
           </li>
           <li class="additionally__item">
             <label class="additionally__label">
+              <span class="visually-hidden">добавитьв корзину молоко</span>
               <input class="additionally__input" type="checkbox" name="milk">
+              <span class="additionally__control-mark"></span>
               <span class="additionally__label-title">молоко</span>
             </label>
           </li>
           <li class="additionally__item">
             <label class="additionally__label">
+              <span class="visually-hidden">добавить в корзину витамины</span>
               <input class="additionally__input" type="checkbox" name="vitamin">
+              <span class="additionally__control-mark"></span>
               <span class="additionally__label-title">витамины</span>
             </label>
           </li>
