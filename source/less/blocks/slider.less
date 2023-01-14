@@ -77,10 +77,30 @@
   cursor: pointer;
 }
 
+.slider__range::-webkit-slider-thumb:hover {
+  background-image: url("../../img/curtain-mobile-hover.svg");
+}
+
+.slider__range::-webkit-slider-thumb:active {
+  background-image: url("../../img/curtain-mobile-active.svg");
+}
+
 @media (min-width: @tablet-width) {
   .slider__range::-webkit-slider-thumb {
     height: 512px;
     background-image: url("../../img/curtain-tablet-desktop.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider__range::-webkit-slider-thumb:hover {
+    background-image: url("../../img/curtain-tablet-desktop-hover.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slider__range::-webkit-slider-thumb:active {
+    background-image: url("../../img/curtain-tablet-desktop-active.svg");
   }
 }
 

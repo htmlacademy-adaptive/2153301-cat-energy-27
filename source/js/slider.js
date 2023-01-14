@@ -10,5 +10,3 @@ range.addEventListener('input', () => {
   leftImage.style.width = `${range.value}%`;
   rightImage.style.width = `${100 - range.value}%`;
 });
-
-
