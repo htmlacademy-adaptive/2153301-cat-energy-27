@@ -6,6 +6,20 @@
   background-color: rgba(234, 234, 234, 1);
 }
 
+@media (min-width: @tablet-width) {
+  .example {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 57%, rgba(234, 234, 234, 1) 57%);
+    border-top: 1px solid rgba(230, 230, 230, 1);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 23%, rgba(242, 242, 242, 1) 23%);
+    border: none;
+  }
+}
+
 .example__wrapper {
   width: 320px;
   padding: 25px 20px 40px;
@@ -14,6 +28,8 @@
 
 @media (min-width: @tablet-width) {
   .example__wrapper {
+    display: flex;
+    flex-direction: column;
     width: @tablet-width;
     padding: 43px 30px 101px;
   }
@@ -23,8 +39,8 @@
   .example__wrapper {
     width: @desktop-width;
     display: grid;
-    grid-template-columns: 436px 560px;
-    gap: 146px 224px;
+    grid-template-columns: 433px 554px;
+    gap: 145px 230px;
     padding: 0 110px 75px;
   }
 }
@@ -67,13 +83,14 @@
   .example__inner {
     grid-template-columns: 366px 174px;
     gap: 54px 167px;
-    margin-bottom: 91px;
+    margin-bottom: 100px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .example__inner {
     grid-template-columns: 1fr;
+    margin-bottom: 0;
   }
 }
 
@@ -132,13 +149,16 @@
   }
 }
 
-.price {
-  margin-left: 63px;
+@media (min-width: @desktop-width) {
+  .price {
+    margin-left: 63px;
+  }
 }
 
 .example__slider {
   margin: 0;
 }
+
 
 @media (min-width: @desktop-width) {
   .example__slider {
