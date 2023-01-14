@@ -53,7 +53,8 @@
             <a class="main-nav__link" href="catalog.html" aria-label="ссылка на страницу каталога">каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html" aria-label="ссылка на страницу заполнения формы">подбор программы</a>
+            <a class="main-nav__link" href="form.html" aria-label="ссылка на страницу заполнения формы">подбор
+              программы</a>
           </li>
         </ul>
       </nav>
@@ -68,15 +69,18 @@
           <h1 class="hero__title">Функциональное питание для котов</h1>
           <span class="hero__slogan">Занялся собой? Займись котом!</span>
           <a class="hero__button" href="form.html" aria-label="ссылка на страницу формы">подобрать программу</a>
-          <picture>
-            <source media="(min-width: 1440px)"
-              srcset="img/cat-chicken-big-desktop.png 1x, img/cat-chicken-big-desktop@2x.png 2x" width="552"
-              height="499">
-            <source media="(min-width: 768px)"
-              srcset="img/cat-chicken-big-tablet.png 1x, img/cat-chicken-big-tablet@2x.png 2x" width="709" height="609">
-            <img class="hero__image" src="img/cat-chicken-big.png" width="280" height="270"
-              srcset="img/cat-chicken-big@2x.png" alt="корм для котов">
-          </picture>
+
+            <picture>
+              <source media="(min-width: 1440px)"
+                srcset="img/cat-chicken-big-desktop.png 1x, img/cat-chicken-big-desktop@2x.png 2x" width="552"
+                height="499">
+              <source media="(min-width: 768px)"
+                srcset="img/cat-chicken-big-tablet.png 1x, img/cat-chicken-big-tablet@2x.png 2x" width="709"
+                height="609">
+              <img class="hero__image" src="img/cat-chicken-big.png" width="280" height="270"
+                srcset="img/cat-chicken-big@2x.png" alt="корм для котов">
+            </picture>
+
         </div>
       </div>
     </div>
@@ -124,9 +128,7 @@
         <div class="example__inner">
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
             Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит
-            по
-            16
-            часов в день.
+            по 16 часов в день.
           </p>
           <dl class="example__list list-features">
             <div class="list-features__inner">
@@ -144,27 +146,19 @@
           </div>
         </div>
 
-        <figure class="example__before-after">
-          <picture>
-            <source media="(min-width: 768px)"
-              srcset="img/example/fat-cat-tablet-desktop.png 1x, img/example/fat-cat-tablet-desktop@2x.png 2x"
-              width="560" height="512">
-            <img class="example__fat-cat" src="img/example/fat-cat.png" srcset="img/example/fat-cat@2x.png 2x"
-              width="280" height="256" alt="упитанный кот">
-          </picture>
-          <picture>
-            <source media="(min-width: 768px)"
-              srcset="img/example/skinny-cat-tablet-desktop.png 1x, img/example/skinny-cat-tablet-desktop@2x.png 2x"
-              width="560" height="512">
-            <img class="example__skinny-cat" src="img/example/skinny-cat.png" srcset="img/example/skinny-cat@2x.png 2x"
-              width="280" height="256" alt="стройный кот">
-          </picture>
-        </figure>
+        <div class="example__slider slider">
+          <div class="slider__image-wrapper">
+            <div class="slider__half-wrapper slider__half-wrapper--left" style="width: 50%"></div>
+            <div class="slider__half-wrapper slider__half-wrapper--right" style="width: 50%"></div>
+            <input class="slider__range" type="range" value="50" min="0" max="100">
+          </div>
+        </div>
       </section>
     </div>
+
     <div class="cooperation cooperation--primary">
       <div class="cooperation__inner">
-        <p class="cooperation__text">приглашаем к сотрудничеству дилеров!</p>
+        <p class="cooperation__text">приглашаем<br> к сотрудничеству дилеров!</p>
         <p class="cooperation__address">ул. Большая
           Конюшенная, д. 19/8
           Санкт-Петербург</p>
@@ -213,7 +207,8 @@
             </li>
           </ul>
         </div>
-        <a class="footer__html-academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="ссылка на сайт HTML Academy">
+        <a class="footer__html-academy-link" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="ссылка на сайт HTML Academy">
           <span class="footer__html-academy-text">HTML Academy</span>
           <svg class="footer__html-academy-logo" xmlns="http://www.w3.org/2000/svg" width="27" height="34" fill="none"
             aria-hidden="true" focusable="false" viewBox="0 0 27 34">
@@ -226,6 +221,7 @@
   </footer>
 
   <script src="./js/script.js"></script>
+  <script src="./js/slider.js"></script>
 </body>
 
 </html>
