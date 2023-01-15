@@ -61,6 +61,7 @@
   width: 100%;
   min-height: 45px;
   margin: 0;
+  padding: 14px 20px;
   box-sizing: border-box;
   border: 1px solid rgba(231, 231, 231, 1);
   .form-input-font-prime();
@@ -69,7 +70,18 @@
 @media (min-width: @tablet-width) {
   .basic-information__input {
     min-height: 52px;
+    padding: 11px 20px;
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.basic-information__input-number {
+  appearance: textfield;
+}
+
+.basic-information__input-number::-webkit-outer-spin-button,
+.basic-information__input-number::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
