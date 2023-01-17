@@ -8,6 +8,8 @@ import htmlmin from 'gulp-htmlmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
+import svgstore from 'gulp-svgstore';
+import rename from 'gulp-rename';
 
 // Styles
 
@@ -40,7 +42,7 @@ const scripts = () => {
 
 // Images
 
-export const optimizeImages = () => {
+const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'));
@@ -64,9 +66,19 @@ export const createWebp = () => {
 // Svg
 
 export const svg = () => {
-  return gulp.src('source/img')
+  return gulp.src(['source/img/**/*.svg', '!source/img/plus.svg'])
     .pipe(svgo())
-    .pipe(gulp.dest(build/img));
+    .pipe(gulp.dest('build/img'));
+}
+
+export const sprite = () => {
+  gulp.src('source/img/plus.svg')
+    .pipe(svgo())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('sourse/img'));
 }
 
 // Server
@@ -93,5 +105,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  html, styles, images, scripts, server, watcher
+  html, styles, copyImages, svg, sprite, scripts, server, watcher
 );
