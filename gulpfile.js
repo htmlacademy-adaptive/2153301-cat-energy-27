@@ -1,4 +1,4 @@
-import gulp, { src } from 'gulp';
+import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
@@ -11,6 +11,7 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import rename from 'gulp-rename';
+import del from 'del';
 
 // Styles
 
@@ -37,10 +38,11 @@ export const html = () => {
 
 // Scripts
 
-const scripts = () => {
+export const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
 }
 
 // Images
@@ -89,9 +91,14 @@ export const sprite = () => {
 // Copy
 
 export const copy = (done) => {
-  gulp.src([
-    
-  ])
+  return gulp.src([
+    'source/fonts/*.{woff2,woff}',
+    'source/*.ico',
+    'source/*.webmanifest'
+  ], {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build/'))
 }
 
 // Server
@@ -108,15 +115,27 @@ const server = (done) => {
   done();
 }
 
+// Delete
+
+export const clean = () => {
+  return del('build');
+};
+
+// Reload
+
+function reload(done) {
+  browser.reload();
+  done();
+}
+
 // Watcher
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-
+  gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-
 export default gulp.series(
-  html, styles, copyImages, svg, sprite, scripts, server, watcher
+  html, styles, copyImages, svg, sprite, copy, scripts, server, watcher, clean
 );
