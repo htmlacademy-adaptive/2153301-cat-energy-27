@@ -91,14 +91,16 @@ export const sprite = () => {
 // Copy
 
 export const copy = (done) => {
-  return gulp.src([
-    'source/fonts/*.{woff2,woff}',
-    'source/*.ico',
-    'source/*.webmanifest'
+  gulp.src([
+    'source/fonts/**/*.{woff2,woff}',
+    'source/img/favicons/*.*',
+    '*.ico',
+    'manifest.webmanifest',
   ], {
     base: 'source'
   })
-    .pipe(gulp.dest('build/'))
+    .pipe(gulp.dest('build'))
+  done();
 }
 
 // Server
@@ -115,7 +117,7 @@ const server = (done) => {
   done();
 }
 
-// Delete
+// Clean
 
 export const clean = () => {
   return del('build');
@@ -123,7 +125,7 @@ export const clean = () => {
 
 // Reload
 
-function reload(done) {
+const reload = (done) => {
   browser.reload();
   done();
 }
