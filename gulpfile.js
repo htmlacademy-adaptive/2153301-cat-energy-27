@@ -1,7 +1,8 @@
-import gulp from 'gulp';
+import gulp, { src } from 'gulp';
 import plumber from 'gulp-plumber';
 import less from 'gulp-less';
 import postcss from 'gulp-postcss';
+import csso from 'postcss-csso';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
@@ -18,8 +19,10 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
@@ -71,14 +74,24 @@ export const svg = () => {
     .pipe(gulp.dest('build/img'));
 }
 
+// Sprite
+
 export const sprite = () => {
-  gulp.src('source/img/plus.svg')
+  return gulp.src('source/img/plus.svg')
     .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('sourse/img'));
+    .pipe(gulp.dest('build/img'));
+}
+
+// Copy
+
+export const copy = (done) => {
+  gulp.src([
+    
+  ])
 }
 
 // Server
