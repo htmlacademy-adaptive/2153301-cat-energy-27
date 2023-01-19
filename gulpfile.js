@@ -91,13 +91,13 @@ export const sprite = () => {
 // Copy
 
 export const copy = (done) => {
-  gulp.src([
+  return gulp.src([
     'source/fonts/**/*.{woff2,woff}',
     'source/img/favicons/*.*',
     '*.ico',
     'manifest.webmanifest',
   ], {
-    base: 'source'
+    base: './'
   })
     .pipe(gulp.dest('build'))
   done();
@@ -134,10 +134,10 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
-  gulp.watch('source/js/script.js', gulp.series(scripts));
+  gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 export default gulp.series(
-  html, styles, copyImages, svg, sprite, copy, scripts, server, watcher, clean
+  html, styles, copyImages, svg, sprite, copy, scripts, server, watcher,
 );
