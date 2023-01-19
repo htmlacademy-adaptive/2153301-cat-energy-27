@@ -47,7 +47,7 @@ export const scripts = () => {
 
 // Images
 
-const optimizeImages = () => {
+export const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'));
@@ -88,16 +88,13 @@ export const sprite = () => {
     .pipe(gulp.dest('build/img'));
 }
 
-// Copy
-
 export const copy = (done) => {
-  return gulp.src([
+  gulp.src([
     'source/fonts/**/*.{woff2,woff}',
-    'source/img/favicons/*.*',
-    '*.ico',
-    'manifest.webmanifest',
+    'source/*.ico',
+    'source/*.webmanifest',
   ], {
-    base: './'
+    base: 'source'
   })
     .pipe(gulp.dest('build'))
   done();
@@ -105,7 +102,7 @@ export const copy = (done) => {
 
 // Server
 
-const server = (done) => {
+export const server = (done) => {
   browser.init({
     server: {
       baseDir: 'build'
@@ -132,12 +129,43 @@ const reload = (done) => {
 
 // Watcher
 
-const watcher = () => {
+export const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
 
-export default gulp.series(
-  html, styles, copyImages, svg, sprite, copy, scripts, server, watcher,
+// Build
+
+export const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svg,
+    sprite,
+    createWebp
+  ),
 );
+
+// Default
+
+export default gulp.series(
+  clean,
+  copy,
+  copyImages,
+  gulp.parallel(
+  styles,
+  html,
+  scripts,
+  svg,
+  sprite,
+  createWebp
+  ),
+  gulp.series(
+  server,
+  watcher
+  ));
