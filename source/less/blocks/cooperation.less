@@ -35,7 +35,7 @@
     left: center;
     transform: translateX(-327px);
     width: 565px;
-    padding: 60px 80px 56px;
+    padding: 60px 60px 56px 80px;
     background-color: rgba(255, 255, 255, 1);
   }
 }
@@ -88,7 +88,10 @@
 
 @media (min-width: @desktop-width) {
   .cooperation__address {
-    width: 155px;
+    width: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: start;
   }
 }

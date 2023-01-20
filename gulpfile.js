@@ -71,22 +71,22 @@ export const createWebp = () => {
 // Svg
 
 export const svg = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/plus.svg'])
+  return gulp.src('source/img/**/*.svg')
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
 // Sprite
 
-export const sprite = () => {
-  return gulp.src('source/img/plus.svg')
-    .pipe(svgo())
-    .pipe(svgstore({
-      inlineSvg: true
-    }))
-    .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('build/img'));
-}
+// export const sprite = () => {
+//   return gulp.src('source/img/plus.svg')
+//     .pipe(svgo())
+//     .pipe(svgstore({
+//       inlineSvg: true
+//     }))
+//     .pipe(rename('sprite.svg'))
+//     .pipe(gulp.dest('build/img'));
+// }
 
 export const copy = (done) => {
   gulp.src([
@@ -132,7 +132,7 @@ const reload = (done) => {
 export const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build
@@ -146,7 +146,7 @@ export const build = gulp.series(
     html,
     scripts,
     svg,
-    sprite,
+    // sprite,
     createWebp
   ),
 );
@@ -162,7 +162,7 @@ export default gulp.series(
   html,
   scripts,
   svg,
-  sprite,
+  // sprite,
   createWebp
   ),
   gulp.series(
