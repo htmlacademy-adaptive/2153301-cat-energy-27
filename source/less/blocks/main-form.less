@@ -7,7 +7,14 @@
 
 @media (min-width: @tablet-width) {
   .main-form {
+    padding-top: 60px;
     border: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-form {
+    padding-top: 71px;
   }
 }
 
@@ -55,7 +62,7 @@
 .main-form__header-text-wrapper {
   align-self: center;
   width: 280px;
-  margin-bottom: 39px;
+  margin-bottom: 37px;
 }
 
 @media (min-width: @tablet-width) {
@@ -106,14 +113,30 @@
 }
 
 .main-form__button {
-  margin-bottom: 21px;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 40px;
+  margin: 0 auto 21px;
+  font-family: @font-family-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(104, 183, 56, 1);
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
 }
 
 @media (min-width: @tablet-width) {
   .main-form__button {
     width: 282px;
+    height: 52px;
     margin: 0;
+    font-size: 20px;
   }
 }
 
@@ -125,7 +148,7 @@
 
 .main-form__necessarily {
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   text-align: center;
   font-family: @font-family-secondary;
   font-size: 14px;
@@ -137,6 +160,7 @@
 @media (min-width: @tablet-width) {
   .main-form__necessarily {
     margin: 0;
+    align-self: center;
     text-align: start;
     font-size: 16px;
   }
