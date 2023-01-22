@@ -39,6 +39,10 @@
   }
 }
 
+@media (min-width: @desktop-width) {
+  background-color: rgba(68, 68, 68, 1);
+}
+
 .hero__container::after {
   position: absolute;
   content: "";
@@ -50,6 +54,7 @@
   background-image: url("../../img/cat-hero.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
+  background-color: rgba(68, 68, 68, 1);
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/cat-hero@2x.jpg");
@@ -68,7 +73,6 @@
     display: block;
     left: 50%;
     width: 50%;
-    background-color: rgba(104, 183, 56, 0.85);
     background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/big-cat-hero.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
