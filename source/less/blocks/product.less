@@ -26,7 +26,7 @@
     padding: 0 0 68px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 141px 60px;
+    gap: 140px 60px;
     border: none;
   }
 }
@@ -36,6 +36,7 @@
     width: 1220px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 143px 80px;
+    padding-bottom: 76px;
   }
 }
 
@@ -58,7 +59,7 @@
   width: 320px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 13px;
+  row-gap: 12px;
   padding: 19px 20px 25px;
   box-sizing: border-box;
 }
@@ -77,13 +78,36 @@
   justify-content: center;
   align-items: center;
   width: 140px;
-  height: 112px;
+  min-height: 112px;
 }
 
 @media (min-width: @tablet-width) {
   .product__card-image-link {
     position: absolute;
-    top: 0;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .product__card-image-link {
+    top: -52px;
+  }
+}
+
+.product__card-image-link-1000g {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 140px;
+  min-height: 112px;
+}
+
+@media (min-width: @tablet-width) {
+  .product__card-image-link-1000g {
+    position: absolute;
+    top: -73px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -91,7 +115,7 @@
 
 @media (min-width: @tablet-width) {
   .product__card-image-link-1000g {
-    top: -15px;
+    top: -80px;
   }
 }
 
@@ -122,7 +146,7 @@
   .product__card-title {
     width: 130px;
     align-self: center;
-    margin-bottom: 21px;
+    margin-bottom: 11px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -178,8 +202,8 @@
   margin: 0 auto;
   font-family: @font-family-primary;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(104, 183, 56, 1);
   text-decoration: none;
@@ -201,10 +225,18 @@
   }
 }
 
+.product__button:hover {
+  background-color: rgba(94, 170, 47, 1);
+}
+
+.product__button:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .product__show-more-container {
   position: relative;
   padding-top: 78px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   border-bottom: 1px solid rgba(235, 235, 235, 1);
 }
 
@@ -261,7 +293,11 @@
 
 @media (min-width: @tablet-width) {
   .product__show-more-title::before {
+    width: 60px;
+    height: 60px;
     top: 52px;
+    background: url("../../img/plus-tablet-desktop.svg");
+    background-size: 60px 60px;
   }
 }
 
@@ -294,8 +330,8 @@
   margin: 0 auto;
   font-family: @font-family-primary;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 20px;
   color: rgba(68, 68, 68, 1);
   background-color: rgba(242, 242, 242, 1);
   text-decoration: none;

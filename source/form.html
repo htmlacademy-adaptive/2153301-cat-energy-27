@@ -77,7 +77,7 @@
               <label class="basic-information__label">
                 <span class="basic-information__title">имя:*</span>
                 <span class="visually-hidden">поле ввода вашего имени</span>
-                <input class="basic-information__input" type="text" name="basic-information-item__input"
+                <input class="basic-information__input input-form" type="text" name="basic-information-item__input"
                   placeholder="барсик" required>
               </label>
             </li>
@@ -85,7 +85,7 @@
               <label class="basic-information__label">
                 <span class="basic-information__title">вес (кг):*</span>
                 <span class="visually-hidden">поле ввода веса вашего кота</span>
-                <input class="basic-information__input basic-information__input-number" type="number"
+                <input class="basic-information__input input-form basic-information__input-number" type="number"
                   name="basic-information-item__input--number" value="7" min="1" required>
               </label>
             </li>
@@ -93,7 +93,7 @@
               <label class="basic-information__label">
                 <span class="basic-information__title">возраст (лет):</span>
                 <span class="visually-hidden">поле ввода возраста вашего кота</span>
-                <input class="basic-information__input basic-information__input-number" type="number"
+                <input class="basic-information__input input-form basic-information__input-number" type="number"
                   name="basic-information-item__input--number" value="7" min="1">
               </label>
             </li>
@@ -105,7 +105,7 @@
             <li class="program-selection__item">
               <label class="program-selection__label">
                 <span class="visually-hidden">Выбрать программу похудения</span>
-                <input class="program-selection__input visually-hidden" type="radio" name="program-selection"
+                <input class="program-selection__input input-form visually-hidden" type="radio" name="program-selection"
                   value="slim" checked>
                 <span class="program-selection__control-mark"></span>
                 <span class="program-selection__label-title">похудение</span>
@@ -114,7 +114,7 @@
             <li class="program-selection__item">
               <label class="program-selection__label">
                 <span class="visually-hidden">Выбрать программу набора массы</span>
-                <input class="program-selection__input visually-hidden" type="radio" name="program-selection"
+                <input class="program-selection__input input-form visually-hidden" type="radio" name="program-selection"
                   value="plump">
                 <span class="program-selection__control-mark"></span>
                 <span class="program-selection__label-title">Набор массы</span>
@@ -123,7 +123,7 @@
             <li class="program-selection__item">
               <label class="program-selection__label">
                 <span class="visually-hidden">Выбрать вариант, не определился с выбором</span>
-                <input class="program-selection__input visually-hidden" type="radio" name="program-selection"
+                <input class="program-selection__input input-form visually-hidden" type="radio" name="program-selection"
                   value="don't-know">
                 <span class="program-selection__control-mark"></span>
                 <span class="program-selection__label-title">Не знаю (Нужен ваш совет)</span>
@@ -144,12 +144,12 @@
             <label class="user-contacts__label">
               <span class="user-contacts__label-title">E-mail:*</span>
               <span class="visually-hidden">Поле ввода вашего email</span>
-              <input class="user-contacts__input" type="email" name="user-contacts-item__input--email"
+              <input class="user-contacts__input input-form" type="email" name="user-contacts-item__input--email"
                 placeholder="kuklachev@gmail.com" required>
-              <svg class="user-contacts__input-icon-letter" width="18" height="14" viewBox="0 0 18 14" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.5 5.5V13.5H17.5V5.5M0.5 0.5H17.5V2.5L9 8.5L0.5 2.5V0.5Z" stroke="black"
-                  stroke-linecap="round" stroke-linejoin="round" />
+              <svg class="user-contacts__input-icon user-contacts__input-icon-letter" width="18" height="14"
+                viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.5 5.5V13.5H17.5V5.5M0.5 0.5H17.5V2.5L9 8.5L0.5 2.5V0.5Z" stroke-linecap="round"
+                  stroke-linejoin="round" />
               </svg>
             </label>
           </li>
@@ -157,13 +157,13 @@
             <label class="user-contacts__label">
               <span class="user-contacts__label-title">Телефон:*</span>
               <span class="visually-hidden">поле ввода вашего телефона</span>
-              <input class="user-contacts__input" type="tel" name="user-contacts-item__input--tel"
-                placeholder="8 (960) 900-60-90" required>
-              <svg class="user-contacts__input-icon-tel" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
+              <input class="user-contacts__input input-form" type="tel" pattern="[0-9]+"
+                name="user-contacts-item__input--tel" placeholder="8 (960) 900-60-90" required>
+              <svg class="user-contacts__input-icon user-contacts__input-icon-tel" width="16" height="16"
+                viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M7 8H15.5M15.5 8L13 5.5M15.5 8L13 10.5M5.5 0.5V5.5H2.5V10.5H5.5V15.5H3C1.5 15.5 0.5 14.5 0.5 13V3C0.5 1.5 1.5 0.5 3 0.5H5.5Z"
-                  stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                  stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </label>
           </li>
@@ -192,7 +192,7 @@
           <li class="additionally__item">
             <label class="additionally__label">
               <span class="visually-hidden">добавить в заявку сахарозаменитель</span>
-              <input class="additionally__input" type="checkbox" name="sweetener" checked>
+              <input class="additionally__input input-form" type="checkbox" name="sweetener" checked>
               <span class="additionally__control-mark"></span>
               <span class="additionally__label-title">сахарозаменитель</span>
             </label>
@@ -200,7 +200,7 @@
           <li class="additionally__item">
             <label class="additionally__label">
               <span class="visually-hidden">добавить в заявку питьевую воду</span>
-              <input class="additionally__input" type="checkbox" name="drinking water">
+              <input class="additionally__input input-form" type="checkbox" name="drinking water">
               <span class="additionally__control-mark"></span>
               <span class="additionally__label-title">питьевая вода</span>
             </label>
@@ -208,7 +208,7 @@
           <li class="additionally__item">
             <label class="additionally__label">
               <span class="visually-hidden">добавить в заявку молоко</span>
-              <input class="additionally__input" type="checkbox" name="milk">
+              <input class="additionally__input input-form" type="checkbox" name="milk">
               <span class="additionally__control-mark"></span>
               <span class="additionally__label-title">молоко</span>
             </label>
@@ -216,7 +216,7 @@
           <li class="additionally__item">
             <label class="additionally__label">
               <span class="visually-hidden">добавить в заявку витамины</span>
-              <input class="additionally__input" type="checkbox" name="vitamin">
+              <input class="additionally__input input-form" type="checkbox" name="vitamin">
               <span class="additionally__control-mark"></span>
               <span class="additionally__label-title">витамины</span>
             </label>
@@ -225,24 +225,24 @@
       </fieldset>
       <div class="main-form__button-wrapper">
         <span class="visually-hidden">отправить форму заявки</span>
-        <button class="main-form__button button button--primary" type="submit">отправить заявку</button>
+        <button class="main-form__button" type="submit">отправить заявку</button>
         <span class="main-form__necessarily">* — Обязательные поля</span>
       </div>
     </form>
     <div class="cooperation cooperation--secondary">
-      <div class="cooperation__inner">
-        <p class="cooperation__text">приглашаем к сотрудничеству дилеров!</p>
-        <p class="cooperation__address">ул. Большая
-          Конюшенная, д. 19/8
-          Санкт-Петербург</p>
-      </div>
-      <div class="cooperation__map-wrapper">
-        <iframe class="cooperation__map"
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3A0bcdb9c6ca9e392351e16c312a0608a2e9ec47056ff32eff79b8ed11f12a26ca&amp;source=constructor"></iframe>
+      <div class="cooperation__inner cooperation__inner--secondary">
+        <p class="cooperation__text">приглашаем<br>к сотрудничеству дилеров!</p>
+        <div class="cooperation__address cooperation__address--secondary">
+          <span class="cooperation__address-street">ул. Большая Конюшенная, д. 19/8</span>
+          <span class="cooperation__address-city">Санкт-Петербург</span>
+        </div>
       </div>
     </div>
+    <div class="cooperation__map-wrapper">
+      <iframe class="cooperation__map"
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A0bcdb9c6ca9e392351e16c312a0608a2e9ec47056ff32eff79b8ed11f12a26ca&amp;source=constructor"></iframe>
+    </div>
   </main>
-
   <footer class="footer">
     <div class="footer__wrapper">
       <div class="footer__inner">
@@ -257,30 +257,31 @@
             <li class="social-list__item">
               <a class="social-list__link" href="https://vk.com/htmlacademy"
                 aria-label="ссылка на страницу HTML Academy в В контакте">
-                <svg class="social-list__icon" width="27" height="17" aria-hidden="true" focusable="false">
-                  <use href="#sprite__vk"></use>
+                <svg class="social-list__icon" width="28" height="22" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#vkontakte"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link" href="https://www.youtube.com/@HTMLAcademyRUS"
                 aria-label=">ссылка на канал HTML Academy в YouTube">
-                <svg class="social-list__icon" width="24" height="19" aria-hidden="true" focusable="false">
-                  <use href="#sprite__youtube"></use>
+                <svg class="social-list__icon" width="28" height="22" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
             <li class="social-list__item">
               <a class="social-list__link" href="https://t.me/htmlacademy"
                 aria-label="ссылка на группу HTML Academy в Telegram">
-                <svg class="social-list__icon" width="20" height="18" aria-hidden="true" focusable="false">
-                  <use href="#sprite__telegram"></use>
+                <svg class="social-list__icon" width="28" height="22" aria-hidden="true" focusable="false">
+                  <use href="img/sprite.svg#telegram"></use>
                 </svg>
               </a>
             </li>
           </ul>
         </div>
-        <a class="footer__html-academy-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="ссылка на сайт HTML Academy">
+        <a class="footer__html-academy-link" href="https://htmlacademy.ru/intensive/adaptive"
+          aria-label="ссылка на сайт HTML Academy">
           <span class="footer__html-academy-text">HTML Academy</span>
           <svg class="footer__html-academy-logo" xmlns="http://www.w3.org/2000/svg" width="27" height="34" fill="none"
             aria-hidden="true" focusable="false" viewBox="0 0 27 34">

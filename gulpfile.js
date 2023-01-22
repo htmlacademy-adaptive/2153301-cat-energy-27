@@ -71,7 +71,7 @@ export const createWebp = () => {
 // Svg
 
 export const svg = () => {
-  return gulp.src(['source/img/**/*.svg', '!source/img/plus.svg'])
+  return gulp.src(['source/img/**/*.svg', '!source/img/social-list/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
@@ -79,7 +79,7 @@ export const svg = () => {
 // Sprite
 
 export const sprite = () => {
-  return gulp.src('source/img/plus.svg')
+  return gulp.src('source/img/social-list/*.svg')
     .pipe(svgo())
     .pipe(svgstore({
       inlineSvg: true
@@ -132,7 +132,7 @@ const reload = (done) => {
 export const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/*.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 // Build

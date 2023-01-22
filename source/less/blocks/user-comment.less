@@ -27,7 +27,7 @@
 @media (min-width: @tablet-width) {
   .user-comment__title-wrapper {
     width: 628px;
-    margin-bottom: 76px;
+    margin-bottom: 74px;
   }
 }
 
@@ -56,12 +56,24 @@
 .user-comment__title-inner::before {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 16px;
   left: -1000px;
   height: 2px;
   width: 10000%;
   background-color: rgba(104, 183, 56, 1);
   z-index: -1;
+}
+
+@media (min-width: @tablet-width) {
+  .user-comment__title-inner::before {
+    top: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-comment__title-inner::before {
+    top: 21px;
+  }
 }
 
 .user-comment__title {
@@ -81,9 +93,10 @@
 }
 
 .user-comment__input {
+  box-sizing: border-box;
   width: 280px;
-  min-height: 151px;
-  padding: 10px 15px;
+  height: 151px;
+  padding: 9px 14px;
   .form-input-font-prime();
   border: 1px solid rgba(231, 231, 231, 1);
 }
@@ -102,4 +115,13 @@
   .user-comment__input {
     width: 1220px;
   }
+}
+
+.user-comment__input:hover {
+  border: 1px solid rgba(205, 205, 205, 1);
+}
+
+.user-comment__input:focus {
+  border: 1px solid rgba(68, 68, 68, 1);
+  outline: 1px solid rgba(68, 68, 68, 1);
 }
