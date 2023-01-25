@@ -154,7 +154,6 @@
 }
 
 .additionally__input {
-  display: none;
   width: 30px;
   height: 30px;
   margin: 0;
@@ -167,6 +166,11 @@
     height: 40px;
     margin-right: 20px;
   }
+}
+
+.additionally__input:focus-visible + .additionally__control-mark {
+  border: 1px solid rgba(68, 68, 68, 1);
+  outline: 1px solid rgba(68, 68, 68, 1);
 }
 
 .additionally__input:disabled + .additionally__control-mark {
